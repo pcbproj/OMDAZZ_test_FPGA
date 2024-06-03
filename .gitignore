@@ -1,0 +1,6 @@
+db/
+incremental_db/
+*.sof
+*.pof
+*.jic
+*.bak

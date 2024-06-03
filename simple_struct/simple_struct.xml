@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2023.12.14.15:27:11"
+ outputDirectory="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/simple_struct/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="Cyclone IV E"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="EP4CE6E22C8"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_SPEEDGRADE"
+     type="String"
+     defaultValue="8"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_CLOCK_RATE"
+     type="Long"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_CLOCK_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_RESET_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="clk" kind="clock" start="0">
+   <property name="clockRate" value="50000000" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="clk_clk" direction="input" role="clk" width="1" />
+  </interface>
+  <interface name="code7" kind="conduit" start="0">
+   <property name="associatedClock" value="clk" />
+   <property name="associatedReset" value="" />
+   <port name="code7_code7" direction="output" role="code7" width="8" />
+  </interface>
+  <interface name="dig_sel" kind="conduit" start="0">
+   <property name="associatedClock" value="clk" />
+   <property name="associatedReset" value="reset" />
+   <port name="dig_sel_dig_sel" direction="output" role="dig_sel" width="4" />
+  </interface>
+  <interface name="leds" kind="conduit" start="0">
+   <property name="associatedClock" value="clk" />
+   <property name="associatedReset" value="reset" />
+   <port name="leds_leds" direction="output" role="leds" width="4" />
+  </interface>
+  <interface name="reset" kind="reset" start="0">
+   <property name="associatedClock" value="" />
+   <property name="synchronousEdges" value="NONE" />
+   <port name="reset_reset_n" direction="input" role="reset_n" width="1" />
+  </interface>
+  <interface name="scl" kind="conduit" start="0">
+   <property name="associatedClock" value="clk" />
+   <property name="associatedReset" value="reset" />
+   <port name="scl_in" direction="input" role="in" width="1" />
+   <port name="scl_oe" direction="output" role="oe" width="1" />
+  </interface>
+  <interface name="sda" kind="conduit" start="0">
+   <property name="associatedClock" value="clk" />
+   <property name="associatedReset" value="reset" />
+   <port name="sda_in" direction="input" role="in" width="1" />
+   <port name="sda_oe" direction="output" role="oe" width="1" />
+  </interface>
+  <interface name="usart" kind="conduit" start="0">
+   <property name="associatedClock" value="clk" />
+   <property name="associatedReset" value="reset" />
+   <port name="usart_rxd" direction="input" role="rxd" width="1" />
+   <port name="usart_txd" direction="output" role="txd" width="1" />
+  </interface>
+ </perimeter>
+ <entity
+   path=""
+   parameterizationKey="simple_struct:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=EP4CE6E22C8,AUTO_DEVICE_FAMILY=Cyclone IV E,AUTO_DEVICE_SPEEDGRADE=8,AUTO_GENERATION_ID=1702556831,AUTO_UNIQUE_ID=(clock_source:21.1:clockFrequency=50000000,clockFrequencyKnown=true,inputClockFrequency=0,resetSynchronousEdges=NONE)(controller:1.0:)(i2c_transcever:1.0:bus_clk=100000,input_clk=50000000)(usart:1.0:BAUD_RATE=9600,CLK_FREQ_HZ=50000000,DATA_BITS=8,PARITY=0,STOP_BITS=1)(clock:21.1:)(clock:21.1:)(clock:21.1:)(conduit:21.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:21.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(reset:21.1:)(reset:21.1:)(reset:21.1:)"
+   instancePathKey="simple_struct"
+   kind="simple_struct"
+   version="1.0"
+   name="simple_struct">
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
+  <parameter name="AUTO_GENERATION_ID" value="1702556831" />
+  <parameter name="AUTO_DEVICE" value="EP4CE6E22C8" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="-1" />
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="-1" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="8" />
+  <generatedFiles>
+   <file
+       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/simple_struct/synthesis/simple_struct.vhd"
+       type="VHDL" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/simple_struct/synthesis/submodules/controller.vhd"
+       type="VHDL"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/simple_struct/synthesis/submodules/i2c_pkg.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/simple_struct/synthesis/submodules/i2c_master.vhd"
+       type="VHDL"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/simple_struct/synthesis/submodules/usart.vhd"
+       type="VHDL"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/simple_struct/synthesis/submodules/altera_reset_controller.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/simple_struct/synthesis/submodules/altera_reset_synchronizer.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/simple_struct/synthesis/submodules/altera_reset_controller.sdc"
+       type="SDC"
+       attributes="" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/simple_struct.qsys" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/controller_hw.tcl" />
+   <file
+       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/i2c_transcever_hw.tcl" />
+   <file
+       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/usart_hw.tcl" />
+   <file
+       path="C:/intelfpga_lite/21.1/ip/altera/merlin/altera_reset_controller/altera_reset_controller_hw.tcl" />
+  </childSourceFiles>
+  <messages>
+   <message level="Debug" culprit="simple_struct">queue size: 0 starting:simple_struct "simple_struct"</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug">Transform: CustomInstructionTransform</message>
+   <message level="Debug">No custom instruction connections, skipping transform </message>
+   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>4</b> modules, <b>8</b> connections]]></message>
+   <message level="Debug">Transform: MMTransform</message>
+   <message level="Debug">Transform: InterruptMapperTransform</message>
+   <message level="Debug">Transform: InterruptSyncTransform</message>
+   <message level="Debug">Transform: InterruptFanoutTransform</message>
+   <message level="Debug">Transform: AvalonStreamingTransform</message>
+   <message level="Debug">Transform: ResetAdaptation</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug" culprit="reset_adaptation_transform"><![CDATA[After transform: <b>5</b> modules, <b>10</b> connections]]></message>
+   <message level="Debug" culprit="simple_struct"><![CDATA["<b>simple_struct</b>" reuses <b>controller</b> "<b>submodules/controller</b>"]]></message>
+   <message level="Debug" culprit="simple_struct"><![CDATA["<b>simple_struct</b>" reuses <b>i2c_transcever</b> "<b>submodules/i2c_master</b>"]]></message>
+   <message level="Debug" culprit="simple_struct"><![CDATA["<b>simple_struct</b>" reuses <b>usart</b> "<b>submodules/usart</b>"]]></message>
+   <message level="Debug" culprit="simple_struct"><![CDATA["<b>simple_struct</b>" reuses <b>altera_reset_controller</b> "<b>submodules/altera_reset_controller</b>"]]></message>
+   <message level="Debug" culprit="simple_struct">queue size: 3 starting:controller "submodules/controller"</message>
+   <message level="Info" culprit="controller_0"><![CDATA["<b>simple_struct</b>" instantiated <b>controller</b> "<b>controller_0</b>"]]></message>
+   <message level="Debug" culprit="simple_struct">queue size: 2 starting:i2c_transcever "submodules/i2c_master"</message>
+   <message level="Info" culprit="i2c_transcever_0"><![CDATA["<b>simple_struct</b>" instantiated <b>i2c_transcever</b> "<b>i2c_transcever_0</b>"]]></message>
+   <message level="Debug" culprit="simple_struct">queue size: 1 starting:usart "submodules/usart"</message>
+   <message level="Info" culprit="usart_0"><![CDATA["<b>simple_struct</b>" instantiated <b>usart</b> "<b>usart_0</b>"]]></message>
+   <message level="Debug" culprit="simple_struct">queue size: 0 starting:altera_reset_controller "submodules/altera_reset_controller"</message>
+   <message level="Info" culprit="rst_controller"><![CDATA["<b>simple_struct</b>" instantiated <b>altera_reset_controller</b> "<b>rst_controller</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="controller:1.0:"
+   instancePathKey="simple_struct:.:controller_0"
+   kind="controller"
+   version="1.0"
+   name="controller">
+  <generatedFiles>
+   <file
+       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/simple_struct/synthesis/submodules/controller.vhd"
+       type="VHDL"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/simple_struct/synthesis/submodules/i2c_pkg.vhd"
+       type="VHDL"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/controller_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="simple_struct" as="controller_0" />
+  <messages>
+   <message level="Debug" culprit="simple_struct">queue size: 3 starting:controller "submodules/controller"</message>
+   <message level="Info" culprit="controller_0"><![CDATA["<b>simple_struct</b>" instantiated <b>controller</b> "<b>controller_0</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="i2c_transcever:1.0:bus_clk=100000,input_clk=50000000"
+   instancePathKey="simple_struct:.:i2c_transcever_0"
+   kind="i2c_transcever"
+   version="1.0"
+   name="i2c_master">
+  <parameter name="bus_clk" value="100000" />
+  <parameter name="input_clk" value="50000000" />
+  <generatedFiles>
+   <file
+       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/simple_struct/synthesis/submodules/i2c_master.vhd"
+       type="VHDL"
+       attributes="TOP_LEVEL_FILE" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/i2c_transcever_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="simple_struct" as="i2c_transcever_0" />
+  <messages>
+   <message level="Debug" culprit="simple_struct">queue size: 2 starting:i2c_transcever "submodules/i2c_master"</message>
+   <message level="Info" culprit="i2c_transcever_0"><![CDATA["<b>simple_struct</b>" instantiated <b>i2c_transcever</b> "<b>i2c_transcever_0</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="usart:1.0:BAUD_RATE=9600,CLK_FREQ_HZ=50000000,DATA_BITS=8,PARITY=0,STOP_BITS=1"
+   instancePathKey="simple_struct:.:usart_0"
+   kind="usart"
+   version="1.0"
+   name="usart">
+  <parameter name="DATA_BITS" value="8" />
+  <parameter name="PARITY" value="0" />
+  <parameter name="CLK_FREQ_HZ" value="50000000" />
+  <parameter name="BAUD_RATE" value="9600" />
+  <parameter name="STOP_BITS" value="1" />
+  <generatedFiles>
+   <file
+       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/simple_struct/synthesis/submodules/usart.vhd"
+       type="VHDL"
+       attributes="TOP_LEVEL_FILE" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/usart_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="simple_struct" as="usart_0" />
+  <messages>
+   <message level="Debug" culprit="simple_struct">queue size: 1 starting:usart "submodules/usart"</message>
+   <message level="Info" culprit="usart_0"><![CDATA["<b>simple_struct</b>" instantiated <b>usart</b> "<b>usart_0</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_reset_controller:21.1:ADAPT_RESET_REQUEST=0,MIN_RST_ASSERTION_TIME=3,NUM_RESET_INPUTS=1,OUTPUT_RESET_SYNC_EDGES=deassert,RESET_REQUEST_PRESENT=0,RESET_REQ_EARLY_DSRT_TIME=1,RESET_REQ_WAIT_TIME=1,SYNC_DEPTH=2,USE_RESET_REQUEST_IN0=0,USE_RESET_REQUEST_IN1=0,USE_RESET_REQUEST_IN10=0,USE_RESET_REQUEST_IN11=0,USE_RESET_REQUEST_IN12=0,USE_RESET_REQUEST_IN13=0,USE_RESET_REQUEST_IN14=0,USE_RESET_REQUEST_IN15=0,USE_RESET_REQUEST_IN2=0,USE_RESET_REQUEST_IN3=0,USE_RESET_REQUEST_IN4=0,USE_RESET_REQUEST_IN5=0,USE_RESET_REQUEST_IN6=0,USE_RESET_REQUEST_IN7=0,USE_RESET_REQUEST_IN8=0,USE_RESET_REQUEST_IN9=0,USE_RESET_REQUEST_INPUT=0"
+   instancePathKey="simple_struct:.:rst_controller"
+   kind="altera_reset_controller"
+   version="21.1"
+   name="altera_reset_controller">
+  <generatedFiles>
+   <file
+       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/simple_struct/synthesis/submodules/altera_reset_controller.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/simple_struct/synthesis/submodules/altera_reset_synchronizer.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/simple_struct/synthesis/submodules/altera_reset_controller.sdc"
+       type="SDC"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/intelfpga_lite/21.1/ip/altera/merlin/altera_reset_controller/altera_reset_controller_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="simple_struct" as="rst_controller" />
+  <messages>
+   <message level="Debug" culprit="simple_struct">queue size: 0 starting:altera_reset_controller "submodules/altera_reset_controller"</message>
+   <message level="Info" culprit="rst_controller"><![CDATA["<b>simple_struct</b>" instantiated <b>altera_reset_controller</b> "<b>rst_controller</b>"]]></message>
+  </messages>
+ </entity>
+</deploy>

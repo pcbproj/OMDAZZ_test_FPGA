@@ -1,0 +1,835 @@
+Analysis & Synthesis report for 19_PD_VHDL
+Mon Jun  3 10:49:48 2024
+Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis IP Cores Summary
+  9. State Machine - |top_level|simple_struct:u0|usart:usart_0|next_state
+ 10. State Machine - |top_level|simple_struct:u0|usart:usart_0|pr_state
+ 11. State Machine - |top_level|simple_struct:u0|i2c_master:i2c_transcever_0|state
+ 12. State Machine - |top_level|simple_struct:u0|controller:controller_0|PresState
+ 13. Registers Protected by Synthesis
+ 14. User-Specified and Inferred Latches
+ 15. Registers Removed During Synthesis
+ 16. Removed Registers Triggering Further Register Optimizations
+ 17. General Register Statistics
+ 18. Inverted Register Statistics
+ 19. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 20. Source assignments for simple_struct:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1
+ 21. Source assignments for simple_struct:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1
+ 22. Parameter Settings for User Entity Instance: simple_struct:u0|controller:controller_0|pgen:start_gen
+ 23. Parameter Settings for User Entity Instance: simple_struct:u0|i2c_master:i2c_transcever_0
+ 24. Parameter Settings for User Entity Instance: simple_struct:u0|usart:usart_0
+ 25. Parameter Settings for User Entity Instance: simple_struct:u0|altera_reset_controller:rst_controller
+ 26. Parameter Settings for User Entity Instance: simple_struct:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1
+ 27. Parameter Settings for User Entity Instance: simple_struct:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1
+ 28. Port Connectivity Checks: "simple_struct:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1"
+ 29. Port Connectivity Checks: "simple_struct:u0|altera_reset_controller:rst_controller"
+ 30. Port Connectivity Checks: "simple_struct:u0|controller:controller_0|segment_7_hex:seg_7_indicstor"
+ 31. Port Connectivity Checks: "simple_struct:u0|controller:controller_0"
+ 32. Port Connectivity Checks: "simple_struct:u0"
+ 33. Post-Synthesis Netlist Statistics for Top Partition
+ 34. Elapsed Time Per Partition
+ 35. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2021  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Jun  3 10:49:48 2024       ;
+; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
+; Revision Name                      ; 19_PD_VHDL                                  ;
+; Top-level Entity Name              ; top_level                                   ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 415                                         ;
+;     Total combinational functions  ; 349                                         ;
+;     Dedicated logic registers      ; 244                                         ;
+; Total registers                    ; 244                                         ;
+; Total pins                         ; 27                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE6E22C8        ;                    ;
+; Top-level entity name                                            ; top_level          ; 19_PD_VHDL         ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                           ;
++--------------------------------------------------------------------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------+---------------+
+; File Name with User-Entered Path                                                                       ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                           ; Library       ;
++--------------------------------------------------------------------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------+---------------+
+; components/segment_7_hex.vhd                                                                           ; yes             ; User VHDL File               ; C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/segment_7_hex.vhd                               ;               ;
+; components/pgen.vhd                                                                                    ; yes             ; User VHDL File               ; C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/pgen.vhd                                        ;               ;
+; top_level.vhd                                                                                          ; yes             ; User VHDL File               ; C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/top_level.vhd                                              ;               ;
+; c:/work/pcbteach/02_myproj/fpga/omdazz_test/db/ip/simple_struct/simple_struct.v                        ; yes             ; Auto-Found Verilog HDL File  ; c:/work/pcbteach/02_myproj/fpga/omdazz_test/db/ip/simple_struct/simple_struct.v                        ; simple_struct ;
+; c:/work/pcbteach/02_myproj/fpga/omdazz_test/db/ip/simple_struct/submodules/altera_reset_controller.v   ; yes             ; Auto-Found Verilog HDL File  ; c:/work/pcbteach/02_myproj/fpga/omdazz_test/db/ip/simple_struct/submodules/altera_reset_controller.v   ; simple_struct ;
+; c:/work/pcbteach/02_myproj/fpga/omdazz_test/db/ip/simple_struct/submodules/altera_reset_synchronizer.v ; yes             ; Auto-Found Verilog HDL File  ; c:/work/pcbteach/02_myproj/fpga/omdazz_test/db/ip/simple_struct/submodules/altera_reset_synchronizer.v ; simple_struct ;
+; c:/work/pcbteach/02_myproj/fpga/omdazz_test/db/ip/simple_struct/submodules/controller.vhd              ; yes             ; Auto-Found VHDL File         ; c:/work/pcbteach/02_myproj/fpga/omdazz_test/db/ip/simple_struct/submodules/controller.vhd              ; simple_struct ;
+; c:/work/pcbteach/02_myproj/fpga/omdazz_test/db/ip/simple_struct/submodules/i2c_master.vhd              ; yes             ; Auto-Found VHDL File         ; c:/work/pcbteach/02_myproj/fpga/omdazz_test/db/ip/simple_struct/submodules/i2c_master.vhd              ; simple_struct ;
+; c:/work/pcbteach/02_myproj/fpga/omdazz_test/db/ip/simple_struct/submodules/i2c_pkg.vhd                 ; yes             ; Auto-Found VHDL File         ; c:/work/pcbteach/02_myproj/fpga/omdazz_test/db/ip/simple_struct/submodules/i2c_pkg.vhd                 ; simple_struct ;
+; c:/work/pcbteach/02_myproj/fpga/omdazz_test/db/ip/simple_struct/submodules/usart.vhd                   ; yes             ; Auto-Found VHDL File         ; c:/work/pcbteach/02_myproj/fpga/omdazz_test/db/ip/simple_struct/submodules/usart.vhd                   ; simple_struct ;
++--------------------------------------------------------------------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------+---------------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 415       ;
+;                                             ;           ;
+; Total combinational functions               ; 349       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 157       ;
+;     -- 3 input functions                    ; 68        ;
+;     -- <=2 input functions                  ; 124       ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 264       ;
+;     -- arithmetic mode                      ; 85        ;
+;                                             ;           ;
+; Total registers                             ; 244       ;
+;     -- Dedicated logic registers            ; 244       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 27        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 236       ;
+; Total fan-out                               ; 1949      ;
+; Average fan-out                             ; 3.00      ;
++---------------------------------------------+-----------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                          ;
++-------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------+---------------------------+---------------+
+; Compilation Hierarchy Node                            ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                           ; Entity Name               ; Library Name  ;
++-------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------+---------------------------+---------------+
+; |top_level                                            ; 349 (24)            ; 244 (18)                  ; 0           ; 0            ; 0       ; 0         ; 27   ; 0            ; |top_level                                                                                                    ; top_level                 ; work          ;
+;    |simple_struct:u0|                                 ; 325 (0)             ; 226 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|simple_struct:u0                                                                                   ; simple_struct             ; simple_struct ;
+;       |altera_reset_controller:rst_controller|        ; 0 (0)               ; 3 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|simple_struct:u0|altera_reset_controller:rst_controller                                            ; altera_reset_controller   ; simple_struct ;
+;          |altera_reset_synchronizer:alt_rst_sync_uq1| ; 0 (0)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|simple_struct:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1 ; altera_reset_synchronizer ; simple_struct ;
+;       |controller:controller_0|                       ; 136 (77)            ; 107 (75)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|simple_struct:u0|controller:controller_0                                                           ; controller                ; simple_struct ;
+;          |pgen:start_gen|                             ; 1 (1)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|simple_struct:u0|controller:controller_0|pgen:start_gen                                            ; pgen                      ; work          ;
+;          |segment_7_hex:seg_7_indicstor|              ; 58 (58)             ; 29 (29)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|simple_struct:u0|controller:controller_0|segment_7_hex:seg_7_indicstor                             ; segment_7_hex             ; work          ;
+;       |i2c_master:i2c_transcever_0|                   ; 96 (96)             ; 46 (46)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|simple_struct:u0|i2c_master:i2c_transcever_0                                                       ; i2c_master                ; simple_struct ;
+;       |usart:usart_0|                                 ; 93 (93)             ; 70 (70)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|simple_struct:u0|usart:usart_0                                                                     ; usart                     ; simple_struct ;
++-------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------+---------------------------+---------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                                          ;
++--------+-------------------------+---------+--------------+--------------+--------------------------------------------------------------------+----------------------------------------------------------------+
+; Vendor ; IP Core Name            ; Version ; Release Date ; License Type ; Entity Instance                                                    ; IP Include File                                                ;
++--------+-------------------------+---------+--------------+--------------+--------------------------------------------------------------------+----------------------------------------------------------------+
+; N/A    ; Qsys                    ; 21.1    ; N/A          ; N/A          ; |top_level|simple_struct:u0                                        ; C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/simple_struct.qsys ;
+; Altera ; altera_reset_controller ; 21.1    ; N/A          ; N/A          ; |top_level|simple_struct:u0|altera_reset_controller:rst_controller ; C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/simple_struct.qsys ;
++--------+-------------------------+---------+--------------+--------------+--------------------------------------------------------------------+----------------------------------------------------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top_level|simple_struct:u0|usart:usart_0|next_state                                                          ;
++-------------------------+-----------------+-------------------------+--------------------+------------------+-----------------+
+; Name                    ; next_state.STOP ; next_state.PARITY_CHECK ; next_state.RD_BITS ; next_state.START ; next_state.IDLE ;
++-------------------------+-----------------+-------------------------+--------------------+------------------+-----------------+
+; next_state.IDLE         ; 0               ; 0                       ; 0                  ; 0                ; 0               ;
+; next_state.START        ; 0               ; 0                       ; 0                  ; 1                ; 1               ;
+; next_state.RD_BITS      ; 0               ; 0                       ; 1                  ; 0                ; 1               ;
+; next_state.PARITY_CHECK ; 0               ; 1                       ; 0                  ; 0                ; 1               ;
+; next_state.STOP         ; 1               ; 0                       ; 0                  ; 0                ; 1               ;
++-------------------------+-----------------+-------------------------+--------------------+------------------+-----------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top_level|simple_struct:u0|usart:usart_0|pr_state                                                ;
++-----------------------+---------------+-----------------------+------------------+----------------+---------------+
+; Name                  ; pr_state.STOP ; pr_state.PARITY_CHECK ; pr_state.RD_BITS ; pr_state.START ; pr_state.IDLE ;
++-----------------------+---------------+-----------------------+------------------+----------------+---------------+
+; pr_state.IDLE         ; 0             ; 0                     ; 0                ; 0              ; 0             ;
+; pr_state.START        ; 0             ; 0                     ; 0                ; 1              ; 1             ;
+; pr_state.RD_BITS      ; 0             ; 0                     ; 1                ; 0              ; 1             ;
+; pr_state.PARITY_CHECK ; 0             ; 1                     ; 0                ; 0              ; 1             ;
+; pr_state.STOP         ; 1             ; 0                     ; 0                ; 0              ; 1             ;
++-----------------------+---------------+-----------------------+------------------+----------------+---------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top_level|simple_struct:u0|i2c_master:i2c_transcever_0|state                                                                     ;
++----------------+------------+----------------+----------------+----------+----------+----------------+----------------+-------------+-------------+
+; Name           ; state.stop ; state.mstr_ack ; state.slv_ack2 ; state.rd ; state.wr ; state.slv_ack1 ; state.dev_addr ; state.start ; state.ready ;
++----------------+------------+----------------+----------------+----------+----------+----------------+----------------+-------------+-------------+
+; state.ready    ; 0          ; 0              ; 0              ; 0        ; 0        ; 0              ; 0              ; 0           ; 0           ;
+; state.start    ; 0          ; 0              ; 0              ; 0        ; 0        ; 0              ; 0              ; 1           ; 1           ;
+; state.dev_addr ; 0          ; 0              ; 0              ; 0        ; 0        ; 0              ; 1              ; 0           ; 1           ;
+; state.slv_ack1 ; 0          ; 0              ; 0              ; 0        ; 0        ; 1              ; 0              ; 0           ; 1           ;
+; state.wr       ; 0          ; 0              ; 0              ; 0        ; 1        ; 0              ; 0              ; 0           ; 1           ;
+; state.rd       ; 0          ; 0              ; 0              ; 1        ; 0        ; 0              ; 0              ; 0           ; 1           ;
+; state.slv_ack2 ; 0          ; 0              ; 1              ; 0        ; 0        ; 0              ; 0              ; 0           ; 1           ;
+; state.mstr_ack ; 0          ; 1              ; 0              ; 0        ; 0        ; 0              ; 0              ; 0           ; 1           ;
+; state.stop     ; 1          ; 0              ; 0              ; 0        ; 0        ; 0              ; 0              ; 0           ; 1           ;
++----------------+------------+----------------+----------------+----------+----------+----------------+----------------+-------------+-------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top_level|simple_struct:u0|controller:controller_0|PresState                                                   ;
++-----------------------+--------------------+-------------------+-----------------------+-----------------------+----------------+
+; Name                  ; PresState.SEG7_IND ; PresState.UART_RD ; PresState.SEND_TEMPER ; PresState.READ_TEMPER ; PresState.IDLE ;
++-----------------------+--------------------+-------------------+-----------------------+-----------------------+----------------+
+; PresState.IDLE        ; 0                  ; 0                 ; 0                     ; 0                     ; 0              ;
+; PresState.READ_TEMPER ; 0                  ; 0                 ; 0                     ; 1                     ; 1              ;
+; PresState.SEND_TEMPER ; 0                  ; 0                 ; 1                     ; 0                     ; 1              ;
+; PresState.UART_RD     ; 0                  ; 1                 ; 0                     ; 0                     ; 1              ;
+; PresState.SEG7_IND    ; 1                  ; 0                 ; 0                     ; 0                     ; 1              ;
++-----------------------+--------------------+-------------------+-----------------------+-----------------------+----------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Protected by Synthesis                                                                                                                                                                                                                          ;
++-------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
+; Register Name                                                                                                                             ; Protected by Synthesis Attribute or Preserve Register Assignment ; Not to be Touched by Netlist Optimizations ;
++-------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
+; simple_struct:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1|altera_reset_synchronizer_int_chain[0] ; yes                                                              ; yes                                        ;
+; simple_struct:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1|altera_reset_synchronizer_int_chain[1] ; yes                                                              ; yes                                        ;
+; Total number of protected registers is 2                                                                                                  ;                                                                  ;                                            ;
++-------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                                             ;
++--------------------------------------------------------------------------------+-------------------------------------------------------+------------------------+
+; Latch Name                                                                     ; Latch Enable Signal                                   ; Free of Timing Hazards ;
++--------------------------------------------------------------------------------+-------------------------------------------------------+------------------------+
+; simple_struct:u0|controller:controller_0|segment_7_hex:seg_7_indicstor|d_in[0] ; simple_struct:u0|controller:controller_0|wr_ind_pulse ; yes                    ;
+; simple_struct:u0|controller:controller_0|segment_7_hex:seg_7_indicstor|d_in[4] ; simple_struct:u0|controller:controller_0|wr_ind_pulse ; yes                    ;
+; simple_struct:u0|controller:controller_0|segment_7_hex:seg_7_indicstor|d_in[1] ; simple_struct:u0|controller:controller_0|wr_ind_pulse ; yes                    ;
+; simple_struct:u0|controller:controller_0|segment_7_hex:seg_7_indicstor|d_in[5] ; simple_struct:u0|controller:controller_0|wr_ind_pulse ; yes                    ;
+; simple_struct:u0|controller:controller_0|segment_7_hex:seg_7_indicstor|d_in[2] ; simple_struct:u0|controller:controller_0|wr_ind_pulse ; yes                    ;
+; simple_struct:u0|controller:controller_0|segment_7_hex:seg_7_indicstor|d_in[6] ; simple_struct:u0|controller:controller_0|wr_ind_pulse ; yes                    ;
+; simple_struct:u0|controller:controller_0|segment_7_hex:seg_7_indicstor|d_in[3] ; simple_struct:u0|controller:controller_0|wr_ind_pulse ; yes                    ;
+; simple_struct:u0|controller:controller_0|segment_7_hex:seg_7_indicstor|d_in[7] ; simple_struct:u0|controller:controller_0|wr_ind_pulse ; yes                    ;
+; Number of user-specified and inferred latches = 8                              ;                                                       ;                        ;
++--------------------------------------------------------------------------------+-------------------------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                  ;
++-------------------------------------------------------------------------------+---------------------------------------------------------------------+
+; Register name                                                                 ; Reason for Removal                                                  ;
++-------------------------------------------------------------------------------+---------------------------------------------------------------------+
+; simple_struct:u0|usart:usart_0|send_data[10..15]                              ; Stuck at GND due to stuck port data_in                              ;
+; simple_struct:u0|usart:usart_0|send_data[9]                                   ; Stuck at VCC due to stuck port data_in                              ;
+; simple_struct:u0|usart:usart_0|send_data[0]                                   ; Stuck at GND due to stuck port data_in                              ;
+; simple_struct:u0|usart:usart_0|rx_data[11..15]                                ; Stuck at GND due to stuck port data_in                              ;
+; simple_struct:u0|controller:controller_0|temper_ind7[11..15]                  ; Stuck at GND due to stuck port data_in                              ;
+; simple_struct:u0|controller:controller_0|I2C_RxDataLen[0,2,3]                 ; Stuck at GND due to stuck port data_in                              ;
+; simple_struct:u0|controller:controller_0|I2C_DevAddr[6]                       ; Stuck at VCC due to stuck port data_in                              ;
+; simple_struct:u0|controller:controller_0|I2C_DevAddr[4,5]                     ; Stuck at GND due to stuck port data_in                              ;
+; simple_struct:u0|controller:controller_0|I2C_DevAddr[3]                       ; Stuck at VCC due to stuck port data_in                              ;
+; simple_struct:u0|controller:controller_0|I2C_DevAddr[0..2]                    ; Stuck at GND due to stuck port data_in                              ;
+; simple_struct:u0|controller:controller_0|I2C_WrData[0..7]                     ; Stuck at GND due to stuck port data_in                              ;
+; simple_struct:u0|i2c_master:i2c_transcever_0|addr_rw[7]                       ; Merged with simple_struct:u0|i2c_master:i2c_transcever_0|addr_rw[4] ;
+; simple_struct:u0|i2c_master:i2c_transcever_0|addr_rw[2,3,5,6]                 ; Merged with simple_struct:u0|i2c_master:i2c_transcever_0|addr_rw[1] ;
+; simple_struct:u0|i2c_master:i2c_transcever_0|data_tx[0..7]                    ; Merged with simple_struct:u0|i2c_master:i2c_transcever_0|addr_rw[1] ;
+; simple_struct:u0|controller:controller_0|segment_7_hex:seg_7_indicstor|dec[7] ; Stuck at VCC due to stuck port data_in                              ;
+; simple_struct:u0|i2c_master:i2c_transcever_0|addr_rw[1]                       ; Stuck at GND due to stuck port data_in                              ;
+; simple_struct:u0|i2c_master:i2c_transcever_0|addr_rw[4]                       ; Stuck at VCC due to stuck port data_in                              ;
+; simple_struct:u0|usart:usart_0|receive_data[8..10]                            ; Stuck at GND due to stuck port data_in                              ;
+; simple_struct:u0|usart:usart_0|rx_data[8..10]                                 ; Stuck at GND due to stuck port data_in                              ;
+; simple_struct:u0|controller:controller_0|temper_ind7[8..10]                   ; Stuck at GND due to stuck port data_in                              ;
+; simple_struct:u0|controller:controller_0|\FSM:show_cnt[2]                     ; Stuck at GND due to stuck port data_in                              ;
+; simple_struct:u0|controller:controller_0|PresState.SEG7_IND                   ; Lost fanout                                                         ;
+; simple_struct:u0|usart:usart_0|next_state.PARITY_CHECK                        ; Stuck at GND due to stuck port data_in                              ;
+; simple_struct:u0|usart:usart_0|pr_state.PARITY_CHECK                          ; Stuck at GND due to stuck port data_in                              ;
+; Total Number of Removed Registers = 65                                        ;                                                                     ;
++-------------------------------------------------------------------------------+---------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                    ;
++---------------------------------------------------------+---------------------------+----------------------------------------------------------+
+; Register name                                           ; Reason for Removal        ; Registers Removed due to This Register                   ;
++---------------------------------------------------------+---------------------------+----------------------------------------------------------+
+; simple_struct:u0|usart:usart_0|receive_data[10]         ; Stuck at GND              ; simple_struct:u0|usart:usart_0|rx_data[10],              ;
+;                                                         ; due to stuck port data_in ; simple_struct:u0|controller:controller_0|temper_ind7[10] ;
+; simple_struct:u0|usart:usart_0|receive_data[9]          ; Stuck at GND              ; simple_struct:u0|usart:usart_0|rx_data[9],               ;
+;                                                         ; due to stuck port data_in ; simple_struct:u0|controller:controller_0|temper_ind7[9]  ;
+; simple_struct:u0|usart:usart_0|receive_data[8]          ; Stuck at GND              ; simple_struct:u0|usart:usart_0|rx_data[8],               ;
+;                                                         ; due to stuck port data_in ; simple_struct:u0|controller:controller_0|temper_ind7[8]  ;
+; simple_struct:u0|usart:usart_0|rx_data[15]              ; Stuck at GND              ; simple_struct:u0|controller:controller_0|temper_ind7[15] ;
+;                                                         ; due to stuck port data_in ;                                                          ;
+; simple_struct:u0|usart:usart_0|rx_data[14]              ; Stuck at GND              ; simple_struct:u0|controller:controller_0|temper_ind7[14] ;
+;                                                         ; due to stuck port data_in ;                                                          ;
+; simple_struct:u0|usart:usart_0|rx_data[13]              ; Stuck at GND              ; simple_struct:u0|controller:controller_0|temper_ind7[13] ;
+;                                                         ; due to stuck port data_in ;                                                          ;
+; simple_struct:u0|usart:usart_0|rx_data[12]              ; Stuck at GND              ; simple_struct:u0|controller:controller_0|temper_ind7[12] ;
+;                                                         ; due to stuck port data_in ;                                                          ;
+; simple_struct:u0|usart:usart_0|rx_data[11]              ; Stuck at GND              ; simple_struct:u0|controller:controller_0|temper_ind7[11] ;
+;                                                         ; due to stuck port data_in ;                                                          ;
+; simple_struct:u0|controller:controller_0|I2C_DevAddr[3] ; Stuck at VCC              ; simple_struct:u0|i2c_master:i2c_transcever_0|addr_rw[4]  ;
+;                                                         ; due to stuck port data_in ;                                                          ;
+; simple_struct:u0|controller:controller_0|I2C_DevAddr[0] ; Stuck at GND              ; simple_struct:u0|i2c_master:i2c_transcever_0|addr_rw[1]  ;
+;                                                         ; due to stuck port data_in ;                                                          ;
++---------------------------------------------------------+---------------------------+----------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 244   ;
+; Number of registers using Synchronous Clear  ; 82    ;
+; Number of registers using Synchronous Load   ; 8     ;
+; Number of registers using Asynchronous Clear ; 144   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 99    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                                                                                         ;
++--------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; Inverted Register                                                                                                                          ; Fan out ;
++--------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; simple_struct:u0|usart:usart_0|tx_out                                                                                                      ; 1       ;
+; simple_struct:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1|altera_reset_synchronizer_int_chain_out ; 158     ;
+; simple_struct:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1|altera_reset_synchronizer_int_chain[0]  ; 1       ;
+; simple_struct:u0|i2c_master:i2c_transcever_0|sda_int                                                                                       ; 2       ;
+; simple_struct:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1|altera_reset_synchronizer_int_chain[1]  ; 1       ;
+; simple_struct:u0|i2c_master:i2c_transcever_0|bit_cnt[1]                                                                                    ; 17      ;
+; simple_struct:u0|i2c_master:i2c_transcever_0|bit_cnt[2]                                                                                    ; 16      ;
+; simple_struct:u0|i2c_master:i2c_transcever_0|bit_cnt[0]                                                                                    ; 18      ;
+; Total number of inverted registers = 8                                                                                                     ;         ;
++--------------------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |top_level|simple_struct:u0|controller:controller_0|I2C_RxArray[0][5]                  ;
+; 6:1                ; 13 bits   ; 52 LEs        ; 13 LEs               ; 39 LEs                 ; Yes        ; |top_level|simple_struct:u0|usart:usart_0|rx_counter[1]                                ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_level|simple_struct:u0|i2c_master:i2c_transcever_0|bit_cnt[2]                     ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_level|simple_struct:u0|controller:controller_0|segment_7_hex:seg_7_indicstor|Mux3 ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |top_level|simple_struct:u0|usart:usart_0|rx_bits                                      ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |top_level|simple_struct:u0|controller:controller_0|I2C_ByteCnt                        ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |top_level|simple_struct:u0|controller:controller_0|PresState                          ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |top_level|simple_struct:u0|usart:usart_0|Selector20                                   ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |top_level|simple_struct:u0|controller:controller_0|Selector13                         ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |top_level|simple_struct:u0|usart:usart_0|Selector19                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for simple_struct:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1 ;
++-------------------+-------+------+----------------------------------------------------------------------------------------+
+; Assignment        ; Value ; From ; To                                                                                     ;
++-------------------+-------+------+----------------------------------------------------------------------------------------+
+; PRESERVE_REGISTER ; on    ; -    ; altera_reset_synchronizer_int_chain[1]                                                 ;
+; PRESERVE_REGISTER ; on    ; -    ; altera_reset_synchronizer_int_chain[0]                                                 ;
++-------------------+-------+------+----------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for simple_struct:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1 ;
++-------------------+-------+------+--------------------------------------------------------------------------------------------+
+; Assignment        ; Value ; From ; To                                                                                         ;
++-------------------+-------+------+--------------------------------------------------------------------------------------------+
+; PRESERVE_REGISTER ; on    ; -    ; altera_reset_synchronizer_int_chain[0]                                                     ;
+; PRESERVE_REGISTER ; on    ; -    ; altera_reset_synchronizer_int_chain[1]                                                     ;
++-------------------+-------+------+--------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: simple_struct:u0|controller:controller_0|pgen:start_gen ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; edge           ; '1'   ; Enumerated                                                                  ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: simple_struct:u0|i2c_master:i2c_transcever_0 ;
++----------------+----------+---------------------------------------------------------------+
+; Parameter Name ; Value    ; Type                                                          ;
++----------------+----------+---------------------------------------------------------------+
+; input_clk      ; 50000000 ; Signed Integer                                                ;
+; bus_clk        ; 100000   ; Signed Integer                                                ;
++----------------+----------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: simple_struct:u0|usart:usart_0 ;
++----------------+----------+-------------------------------------------------+
+; Parameter Name ; Value    ; Type                                            ;
++----------------+----------+-------------------------------------------------+
+; clk_freq_hz    ; 50000000 ; Signed Integer                                  ;
+; baud_rate      ; 9600     ; Signed Integer                                  ;
+; data_bits      ; 8        ; Signed Integer                                  ;
+; parity         ; 0        ; Signed Integer                                  ;
+; stop_bits      ; 1        ; Signed Integer                                  ;
++----------------+----------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: simple_struct:u0|altera_reset_controller:rst_controller ;
++---------------------------+----------+---------------------------------------------------------------+
+; Parameter Name            ; Value    ; Type                                                          ;
++---------------------------+----------+---------------------------------------------------------------+
+; NUM_RESET_INPUTS          ; 1        ; Signed Integer                                                ;
+; USE_RESET_REQUEST_IN0     ; 0        ; Signed Integer                                                ;
+; USE_RESET_REQUEST_IN1     ; 0        ; Signed Integer                                                ;
+; USE_RESET_REQUEST_IN2     ; 0        ; Signed Integer                                                ;
+; USE_RESET_REQUEST_IN3     ; 0        ; Signed Integer                                                ;
+; USE_RESET_REQUEST_IN4     ; 0        ; Signed Integer                                                ;
+; USE_RESET_REQUEST_IN5     ; 0        ; Signed Integer                                                ;
+; USE_RESET_REQUEST_IN6     ; 0        ; Signed Integer                                                ;
+; USE_RESET_REQUEST_IN7     ; 0        ; Signed Integer                                                ;
+; USE_RESET_REQUEST_IN8     ; 0        ; Signed Integer                                                ;
+; USE_RESET_REQUEST_IN9     ; 0        ; Signed Integer                                                ;
+; USE_RESET_REQUEST_IN10    ; 0        ; Signed Integer                                                ;
+; USE_RESET_REQUEST_IN11    ; 0        ; Signed Integer                                                ;
+; USE_RESET_REQUEST_IN12    ; 0        ; Signed Integer                                                ;
+; USE_RESET_REQUEST_IN13    ; 0        ; Signed Integer                                                ;
+; USE_RESET_REQUEST_IN14    ; 0        ; Signed Integer                                                ;
+; USE_RESET_REQUEST_IN15    ; 0        ; Signed Integer                                                ;
+; OUTPUT_RESET_SYNC_EDGES   ; deassert ; String                                                        ;
+; SYNC_DEPTH                ; 2        ; Signed Integer                                                ;
+; RESET_REQUEST_PRESENT     ; 0        ; Signed Integer                                                ;
+; RESET_REQ_WAIT_TIME       ; 1        ; Signed Integer                                                ;
+; MIN_RST_ASSERTION_TIME    ; 3        ; Signed Integer                                                ;
+; RESET_REQ_EARLY_DSRT_TIME ; 1        ; Signed Integer                                                ;
+; ADAPT_RESET_REQUEST       ; 0        ; Signed Integer                                                ;
++---------------------------+----------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: simple_struct:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1 ;
++----------------+-------+------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                   ;
++----------------+-------+------------------------------------------------------------------------------------------------------------------------+
+; ASYNC_RESET    ; 1     ; Unsigned Binary                                                                                                        ;
+; DEPTH          ; 2     ; Signed Integer                                                                                                         ;
++----------------+-------+------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: simple_struct:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1 ;
++----------------+-------+----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                       ;
++----------------+-------+----------------------------------------------------------------------------------------------------------------------------+
+; ASYNC_RESET    ; 0     ; Signed Integer                                                                                                             ;
+; DEPTH          ; 2     ; Signed Integer                                                                                                             ;
++----------------+-------+----------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "simple_struct:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1" ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                              ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------+
+; reset_in ; Input ; Info     ; Stuck at GND                                                                                         ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "simple_struct:u0|altera_reset_controller:rst_controller" ;
++----------------+--------+----------+------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                        ;
++----------------+--------+----------+------------------------------------------------+
+; reset_req      ; Output ; Info     ; Explicitly unconnected                         ;
+; reset_req_in0  ; Input  ; Info     ; Stuck at GND                                   ;
+; reset_in1      ; Input  ; Info     ; Stuck at GND                                   ;
+; reset_req_in1  ; Input  ; Info     ; Stuck at GND                                   ;
+; reset_in2      ; Input  ; Info     ; Stuck at GND                                   ;
+; reset_req_in2  ; Input  ; Info     ; Stuck at GND                                   ;
+; reset_in3      ; Input  ; Info     ; Stuck at GND                                   ;
+; reset_req_in3  ; Input  ; Info     ; Stuck at GND                                   ;
+; reset_in4      ; Input  ; Info     ; Stuck at GND                                   ;
+; reset_req_in4  ; Input  ; Info     ; Stuck at GND                                   ;
+; reset_in5      ; Input  ; Info     ; Stuck at GND                                   ;
+; reset_req_in5  ; Input  ; Info     ; Stuck at GND                                   ;
+; reset_in6      ; Input  ; Info     ; Stuck at GND                                   ;
+; reset_req_in6  ; Input  ; Info     ; Stuck at GND                                   ;
+; reset_in7      ; Input  ; Info     ; Stuck at GND                                   ;
+; reset_req_in7  ; Input  ; Info     ; Stuck at GND                                   ;
+; reset_in8      ; Input  ; Info     ; Stuck at GND                                   ;
+; reset_req_in8  ; Input  ; Info     ; Stuck at GND                                   ;
+; reset_in9      ; Input  ; Info     ; Stuck at GND                                   ;
+; reset_req_in9  ; Input  ; Info     ; Stuck at GND                                   ;
+; reset_in10     ; Input  ; Info     ; Stuck at GND                                   ;
+; reset_req_in10 ; Input  ; Info     ; Stuck at GND                                   ;
+; reset_in11     ; Input  ; Info     ; Stuck at GND                                   ;
+; reset_req_in11 ; Input  ; Info     ; Stuck at GND                                   ;
+; reset_in12     ; Input  ; Info     ; Stuck at GND                                   ;
+; reset_req_in12 ; Input  ; Info     ; Stuck at GND                                   ;
+; reset_in13     ; Input  ; Info     ; Stuck at GND                                   ;
+; reset_req_in13 ; Input  ; Info     ; Stuck at GND                                   ;
+; reset_in14     ; Input  ; Info     ; Stuck at GND                                   ;
+; reset_req_in14 ; Input  ; Info     ; Stuck at GND                                   ;
+; reset_in15     ; Input  ; Info     ; Stuck at GND                                   ;
+; reset_req_in15 ; Input  ; Info     ; Stuck at GND                                   ;
++----------------+--------+----------+------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "simple_struct:u0|controller:controller_0|segment_7_hex:seg_7_indicstor" ;
++-------+-------+----------+-------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                 ;
++-------+-------+----------+-------------------------------------------------------------------------+
+; en    ; Input ; Info     ; Stuck at VCC                                                            ;
+; dp_in ; Input ; Info     ; Stuck at GND                                                            ;
++-------+-------+----------+-------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "simple_struct:u0|controller:controller_0"                                                   ;
++---------------+-------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type  ; Severity ; Details                                                                             ;
++---------------+-------+----------+-------------------------------------------------------------------------------------+
+; i2c_ack_error ; Bidir ; Warning  ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+-------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "simple_struct:u0"                                                                        ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; leds_leds ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 27                          ;
+; cycloneiii_ff         ; 244                         ;
+;     CLR               ; 44                          ;
+;     CLR SCLR          ; 50                          ;
+;     CLR SLD           ; 4                           ;
+;     ENA               ; 49                          ;
+;     ENA CLR           ; 46                          ;
+;     ENA SLD           ; 4                           ;
+;     SCLR              ; 32                          ;
+;     plain             ; 15                          ;
+; cycloneiii_io_obuf    ; 2                           ;
+; cycloneiii_lcell_comb ; 352                         ;
+;     arith             ; 85                          ;
+;         2 data inputs ; 84                          ;
+;         3 data inputs ; 1                           ;
+;     normal            ; 267                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 9                           ;
+;         2 data inputs ; 33                          ;
+;         3 data inputs ; 67                          ;
+;         4 data inputs ; 157                         ;
+;                       ;                             ;
+; Max LUT depth         ; 6.00                        ;
+; Average LUT depth     ; 2.69                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+    Info: Processing started: Mon Jun  3 10:49:20 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 19_PD_VHDL -c 19_PD_VHDL
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12248): Elaborating Platform Designer system entity "simple_struct.qsys"
+Info (12250): 2024.06.03.10:49:38 Progress: Loading OMDAZZ_test/simple_struct.qsys
+Info (12250): 2024.06.03.10:49:39 Progress: Reading input file
+Info (12250): 2024.06.03.10:49:39 Progress: Adding clk_0 [clock_source 21.1]
+Info (12250): 2024.06.03.10:49:40 Progress: Parameterizing module clk_0
+Info (12250): 2024.06.03.10:49:40 Progress: Adding controller_0 [controller 1.0]
+Info (12250): 2024.06.03.10:49:41 Progress: Parameterizing module controller_0
+Info (12250): 2024.06.03.10:49:41 Progress: Adding i2c_transcever_0 [i2c_transcever 1.0]
+Info (12250): 2024.06.03.10:49:41 Progress: Parameterizing module i2c_transcever_0
+Info (12250): 2024.06.03.10:49:41 Progress: Adding usart_0 [usart 1.0]
+Info (12250): 2024.06.03.10:49:41 Progress: Parameterizing module usart_0
+Info (12250): 2024.06.03.10:49:41 Progress: Building connections
+Info (12250): 2024.06.03.10:49:41 Progress: Parameterizing connections
+Info (12250): 2024.06.03.10:49:41 Progress: Validating
+Info (12250): 2024.06.03.10:49:41 Progress: Done reading input file
+Info (12250): Simple_struct: Generating simple_struct "simple_struct" for QUARTUS_SYNTH
+Info (12250): Controller_0: "simple_struct" instantiated controller "controller_0"
+Info (12250): I2c_transcever_0: "simple_struct" instantiated i2c_transcever "i2c_transcever_0"
+Info (12250): Usart_0: "simple_struct" instantiated usart "usart_0"
+Info (12250): Rst_controller: "simple_struct" instantiated altera_reset_controller "rst_controller"
+Info (12250): Simple_struct: Done "simple_struct" with 5 modules, 8 files
+Info (12249): Finished elaborating Platform Designer system entity "simple_struct.qsys"
+Info (12021): Found 2 design units, including 1 entities, in source file components/segment_7_hex.vhd
+    Info (12022): Found design unit 1: segment_7_hex-Behavioral File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/segment_7_hex.vhd Line: 27
+    Info (12023): Found entity 1: segment_7_hex File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/segment_7_hex.vhd Line: 15
+Info (12021): Found 2 design units, including 1 entities, in source file components/pgen.vhd
+    Info (12022): Found design unit 1: pgen-RTL File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/pgen.vhd Line: 29
+    Info (12023): Found entity 1: pgen File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/pgen.vhd Line: 16
+Info (12021): Found 2 design units, including 0 entities, in source file components/i2c_pkg.vhd
+    Info (12022): Found design unit 1: i2c_pkg File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/i2c_pkg.vhd Line: 6
+    Info (12022): Found design unit 2: i2c_pkg-body File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/i2c_pkg.vhd Line: 85
+Info (12021): Found 2 design units, including 1 entities, in source file components/i2c_master.vhd
+    Info (12022): Found design unit 1: i2c_master-logic File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/i2c_master.vhd Line: 28
+    Info (12023): Found entity 1: i2c_master File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/i2c_master.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file components/usart.vhd
+    Info (12022): Found design unit 1: usart-Behavioral File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/usart.vhd Line: 26
+    Info (12023): Found entity 1: usart File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/usart.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file components/controller.vhd
+    Info (12022): Found design unit 1: controller-behave File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/controller.vhd Line: 37
+    Info (12023): Found entity 1: controller File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/controller.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file top_level.vhd
+    Info (12022): Found design unit 1: top_level-arch File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/top_level.vhd Line: 24
+    Info (12023): Found entity 1: top_level File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/top_level.vhd Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/simple_struct/simple_struct.v
+    Info (12023): Found entity 1: simple_struct File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/db/ip/simple_struct/simple_struct.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/simple_struct/submodules/altera_reset_controller.v
+    Info (12023): Found entity 1: altera_reset_controller File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/db/ip/simple_struct/submodules/altera_reset_controller.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/simple_struct/submodules/altera_reset_synchronizer.v
+    Info (12023): Found entity 1: altera_reset_synchronizer File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/db/ip/simple_struct/submodules/altera_reset_synchronizer.v Line: 24
+Info (12021): Found 2 design units, including 1 entities, in source file db/ip/simple_struct/submodules/controller.vhd
+    Info (12022): Found design unit 1: controller-behave File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/db/ip/simple_struct/submodules/controller.vhd Line: 37
+    Info (12023): Found entity 1: controller File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/db/ip/simple_struct/submodules/controller.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file db/ip/simple_struct/submodules/i2c_master.vhd
+    Info (12022): Found design unit 1: i2c_master-logic File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/db/ip/simple_struct/submodules/i2c_master.vhd Line: 28
+    Info (12023): Found entity 1: i2c_master File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/db/ip/simple_struct/submodules/i2c_master.vhd Line: 7
+Info (12021): Found 2 design units, including 0 entities, in source file db/ip/simple_struct/submodules/i2c_pkg.vhd
+    Info (12022): Found design unit 1: i2c_pkg (simple_struct) File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/db/ip/simple_struct/submodules/i2c_pkg.vhd Line: 6
+    Info (12022): Found design unit 2: i2c_pkg-body File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/db/ip/simple_struct/submodules/i2c_pkg.vhd Line: 85
+Info (12021): Found 2 design units, including 1 entities, in source file db/ip/simple_struct/submodules/usart.vhd
+    Info (12022): Found design unit 1: usart-Behavioral File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/db/ip/simple_struct/submodules/usart.vhd Line: 26
+    Info (12023): Found entity 1: usart File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/db/ip/simple_struct/submodules/usart.vhd Line: 5
+Info (12127): Elaborating entity "top_level" for the top level hierarchy
+Info (12128): Elaborating entity "simple_struct" for hierarchy "simple_struct:u0" File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/top_level.vhd Line: 52
+Info (12128): Elaborating entity "controller" for hierarchy "simple_struct:u0|controller:controller_0" File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/db/ip/simple_struct/simple_struct.v Line: 54
+Warning (10036): Verilog HDL or VHDL warning at controller.vhd(113): object "RegWrDone" assigned a value but never read File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/db/ip/simple_struct/submodules/controller.vhd Line: 113
+Warning (10873): Using initial value X (don't care) for net "leds[3..1]" at controller.vhd(11) File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/db/ip/simple_struct/submodules/controller.vhd Line: 11
+Warning (10873): Using initial value X (don't care) for net "uart_tx_data[15..8]" at controller.vhd(17) File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/db/ip/simple_struct/submodules/controller.vhd Line: 17
+Info (12128): Elaborating entity "pgen" for hierarchy "simple_struct:u0|controller:controller_0|pgen:start_gen" File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/db/ip/simple_struct/submodules/controller.vhd Line: 135
+Info (12128): Elaborating entity "segment_7_hex" for hierarchy "simple_struct:u0|controller:controller_0|segment_7_hex:seg_7_indicstor" File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/db/ip/simple_struct/submodules/controller.vhd Line: 146
+Warning (10492): VHDL Process Statement warning at segment_7_hex.vhd(53): signal "en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/segment_7_hex.vhd Line: 53
+Warning (10492): VHDL Process Statement warning at segment_7_hex.vhd(56): signal "en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/segment_7_hex.vhd Line: 56
+Warning (10492): VHDL Process Statement warning at segment_7_hex.vhd(75): signal "en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/segment_7_hex.vhd Line: 75
+Warning (10492): VHDL Process Statement warning at segment_7_hex.vhd(91): signal "en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/segment_7_hex.vhd Line: 91
+Warning (10492): VHDL Process Statement warning at segment_7_hex.vhd(94): signal "dec_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/segment_7_hex.vhd Line: 94
+Warning (10492): VHDL Process Statement warning at segment_7_hex.vhd(95): signal "dp_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/segment_7_hex.vhd Line: 95
+Warning (10631): VHDL Process Statement warning at segment_7_hex.vhd(88): inferring latch(es) for signal or variable "d_in", which holds its previous value in one or more paths through the process File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/segment_7_hex.vhd Line: 88
+Warning (10631): VHDL Process Statement warning at segment_7_hex.vhd(88): inferring latch(es) for signal or variable "dp", which holds its previous value in one or more paths through the process File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/segment_7_hex.vhd Line: 88
+Info (10041): Inferred latch for "dp[0]" at segment_7_hex.vhd(88) File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/segment_7_hex.vhd Line: 88
+Info (10041): Inferred latch for "dp[1]" at segment_7_hex.vhd(88) File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/segment_7_hex.vhd Line: 88
+Info (10041): Inferred latch for "dp[2]" at segment_7_hex.vhd(88) File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/segment_7_hex.vhd Line: 88
+Info (10041): Inferred latch for "dp[3]" at segment_7_hex.vhd(88) File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/segment_7_hex.vhd Line: 88
+Info (10041): Inferred latch for "d_in[0]" at segment_7_hex.vhd(88) File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/segment_7_hex.vhd Line: 88
+Info (10041): Inferred latch for "d_in[1]" at segment_7_hex.vhd(88) File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/segment_7_hex.vhd Line: 88
+Info (10041): Inferred latch for "d_in[2]" at segment_7_hex.vhd(88) File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/segment_7_hex.vhd Line: 88
+Info (10041): Inferred latch for "d_in[3]" at segment_7_hex.vhd(88) File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/segment_7_hex.vhd Line: 88
+Info (10041): Inferred latch for "d_in[4]" at segment_7_hex.vhd(88) File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/segment_7_hex.vhd Line: 88
+Info (10041): Inferred latch for "d_in[5]" at segment_7_hex.vhd(88) File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/segment_7_hex.vhd Line: 88
+Info (10041): Inferred latch for "d_in[6]" at segment_7_hex.vhd(88) File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/segment_7_hex.vhd Line: 88
+Info (10041): Inferred latch for "d_in[7]" at segment_7_hex.vhd(88) File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/segment_7_hex.vhd Line: 88
+Info (10041): Inferred latch for "d_in[8]" at segment_7_hex.vhd(88) File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/segment_7_hex.vhd Line: 88
+Info (10041): Inferred latch for "d_in[9]" at segment_7_hex.vhd(88) File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/segment_7_hex.vhd Line: 88
+Info (10041): Inferred latch for "d_in[10]" at segment_7_hex.vhd(88) File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/segment_7_hex.vhd Line: 88
+Info (10041): Inferred latch for "d_in[11]" at segment_7_hex.vhd(88) File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/segment_7_hex.vhd Line: 88
+Info (10041): Inferred latch for "d_in[12]" at segment_7_hex.vhd(88) File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/segment_7_hex.vhd Line: 88
+Info (10041): Inferred latch for "d_in[13]" at segment_7_hex.vhd(88) File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/segment_7_hex.vhd Line: 88
+Info (10041): Inferred latch for "d_in[14]" at segment_7_hex.vhd(88) File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/segment_7_hex.vhd Line: 88
+Info (10041): Inferred latch for "d_in[15]" at segment_7_hex.vhd(88) File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/segment_7_hex.vhd Line: 88
+Info (12128): Elaborating entity "i2c_master" for hierarchy "simple_struct:u0|i2c_master:i2c_transcever_0" File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/db/ip/simple_struct/simple_struct.v Line: 73
+Info (12128): Elaborating entity "usart" for hierarchy "simple_struct:u0|usart:usart_0" File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/db/ip/simple_struct/simple_struct.v Line: 92
+Warning (10631): VHDL Process Statement warning at usart.vhd(121): inferring latch(es) for signal or variable "receive_data", which holds its previous value in one or more paths through the process File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/db/ip/simple_struct/submodules/usart.vhd Line: 121
+Info (10041): Inferred latch for "receive_data[11]" at usart.vhd(121) File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/db/ip/simple_struct/submodules/usart.vhd Line: 121
+Info (10041): Inferred latch for "receive_data[12]" at usart.vhd(121) File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/db/ip/simple_struct/submodules/usart.vhd Line: 121
+Info (10041): Inferred latch for "receive_data[13]" at usart.vhd(121) File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/db/ip/simple_struct/submodules/usart.vhd Line: 121
+Info (10041): Inferred latch for "receive_data[14]" at usart.vhd(121) File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/db/ip/simple_struct/submodules/usart.vhd Line: 121
+Info (10041): Inferred latch for "receive_data[15]" at usart.vhd(121) File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/db/ip/simple_struct/submodules/usart.vhd Line: 121
+Info (12128): Elaborating entity "altera_reset_controller" for hierarchy "simple_struct:u0|altera_reset_controller:rst_controller" File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/db/ip/simple_struct/simple_struct.v Line: 155
+Info (12128): Elaborating entity "altera_reset_synchronizer" for hierarchy "simple_struct:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1" File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/db/ip/simple_struct/submodules/altera_reset_controller.v Line: 208
+Info (12128): Elaborating entity "altera_reset_synchronizer" for hierarchy "simple_struct:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1" File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/db/ip/simple_struct/submodules/altera_reset_controller.v Line: 220
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (13000): Registers with preset signals will power-up high File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/db/ip/simple_struct/submodules/usart.vhd Line: 98
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "seg7_code[7]" is stuck at VCC File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/top_level.vhd Line: 17
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 1 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 448 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 7 input pins
+    Info (21059): Implemented 18 output pins
+    Info (21060): Implemented 2 bidirectional pins
+    Info (21061): Implemented 421 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 16 warnings
+    Info: Peak virtual memory: 4815 megabytes
+    Info: Processing ended: Mon Jun  3 10:49:48 2024
+    Info: Elapsed time: 00:00:28
+    Info: Total CPU time (on all processors): 00:00:56
+
+

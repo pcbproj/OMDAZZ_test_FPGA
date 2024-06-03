@@ -1,0 +1,43 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\Work\PCBteach\docs\02_MY_projects\FPGA_Projects\OMDAZZ_test\simple_struct.qsys --block-symbol-file --output-directory=C:\Work\PCBteach\docs\02_MY_projects\FPGA_Projects\OMDAZZ_test\simple_struct --family="Cyclone IV E" --part=EP4CE6E22C8
+Progress: Loading OMDAZZ_test/simple_struct.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 21.1]
+Progress: Parameterizing module clk_0
+Progress: Adding controller_0 [controller 1.0]
+Progress: Parameterizing module controller_0
+Progress: Adding i2c_transcever_0 [i2c_transcever 1.0]
+Progress: Parameterizing module i2c_transcever_0
+Progress: Adding usart_0 [usart 1.0]
+Progress: Parameterizing module usart_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\Work\PCBteach\docs\02_MY_projects\FPGA_Projects\OMDAZZ_test\simple_struct.qsys --synthesis=VHDL --output-directory=C:\Work\PCBteach\docs\02_MY_projects\FPGA_Projects\OMDAZZ_test\simple_struct\synthesis --family="Cyclone IV E" --part=EP4CE6E22C8
+Progress: Loading OMDAZZ_test/simple_struct.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 21.1]
+Progress: Parameterizing module clk_0
+Progress: Adding controller_0 [controller 1.0]
+Progress: Parameterizing module controller_0
+Progress: Adding i2c_transcever_0 [i2c_transcever 1.0]
+Progress: Parameterizing module i2c_transcever_0
+Progress: Adding usart_0 [usart 1.0]
+Progress: Parameterizing module usart_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: simple_struct: Generating simple_struct "simple_struct" for QUARTUS_SYNTH
+Info: controller_0: "simple_struct" instantiated controller "controller_0"
+Info: i2c_transcever_0: "simple_struct" instantiated i2c_transcever "i2c_transcever_0"
+Info: usart_0: "simple_struct" instantiated usart "usart_0"
+Info: rst_controller: "simple_struct" instantiated altera_reset_controller "rst_controller"
+Info: simple_struct: Done "simple_struct" with 5 modules, 8 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

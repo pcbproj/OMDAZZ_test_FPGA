@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="$${FILENAME}">
+ <component
+   name="$${FILENAME}"
+   displayName="$${FILENAME}"
+   version="1.0"
+   description=""
+   tags=""
+   categories="System" />
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element clk_0
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+   element controller_0
+   {
+      datum _sortIndex
+      {
+         value = "1";
+         type = "int";
+      }
+   }
+   element i2c_transcever_0
+   {
+      datum _sortIndex
+      {
+         value = "3";
+         type = "int";
+      }
+   }
+   element simple_struct
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element simple_struct
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element simple_struct
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element simple_struct
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element simple_struct
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element simple_struct
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element simple_struct
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone IV E";
+         type = "String";
+      }
+   }
+   element simple_struct
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element simple_struct
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element simple_struct
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element usart_0
+   {
+      datum _sortIndex
+      {
+         value = "2";
+         type = "int";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
+ <parameter name="device" value="EP4CE6E22C8" />
+ <parameter name="deviceFamily" value="Cyclone IV E" />
+ <parameter name="deviceSpeedGrade" value="8" />
+ <parameter name="fabricMode" value="QSYS" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="generationId" value="0" />
+ <parameter name="globalResetBus" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="hideFromIPCatalog" value="false" />
+ <parameter name="lockedInterfaceDefinition" value="" />
+ <parameter name="maxAdditionalLatency" value="1" />
+ <parameter name="projectName" value="19_PD_VHDL.qpf" />
+ <parameter name="sopcBorderPoints" value="false" />
+ <parameter name="systemHash" value="0" />
+ <parameter name="testBenchDutName" value="" />
+ <parameter name="timeStamp" value="0" />
+ <parameter name="useTestBenchNamingPattern" value="false" />
+ <instanceScript></instanceScript>
+ <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
+ <interface name="code7" internal="controller_0.code7" type="conduit" dir="end" />
+ <interface
+   name="dig_sel"
+   internal="controller_0.dig_sel"
+   type="conduit"
+   dir="end" />
+ <interface name="io" internal="controller_0.io" />
+ <interface name="leds" internal="controller_0.leds" type="conduit" dir="end" />
+ <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
+ <interface name="scl" internal="i2c_transcever_0.SCL" type="conduit" dir="end" />
+ <interface name="sda" internal="i2c_transcever_0.SDA" type="conduit" dir="end" />
+ <interface name="seg7" internal="controller_0.seg7" />
+ <interface name="usart" internal="usart_0.ser" type="conduit" dir="end" />
+ <module name="clk_0" kind="clock_source" version="21.1" enabled="1">
+  <parameter name="clockFrequency" value="50000000" />
+  <parameter name="clockFrequencyKnown" value="true" />
+  <parameter name="inputClockFrequency" value="0" />
+  <parameter name="resetSynchronousEdges" value="NONE" />
+ </module>
+ <module name="controller_0" kind="controller" version="1.0" enabled="1" />
+ <module
+   name="i2c_transcever_0"
+   kind="i2c_transcever"
+   version="1.0"
+   enabled="1">
+  <parameter name="bus_clk" value="100000" />
+  <parameter name="input_clk" value="50000000" />
+ </module>
+ <module name="usart_0" kind="usart" version="1.0" enabled="1">
+  <parameter name="BAUD_RATE" value="9600" />
+  <parameter name="CLK_FREQ_HZ" value="50000000" />
+  <parameter name="DATA_BITS" value="8" />
+  <parameter name="PARITY" value="0" />
+  <parameter name="STOP_BITS" value="1" />
+ </module>
+ <connection kind="clock" version="21.1" start="clk_0.clk" end="usart_0.clock" />
+ <connection
+   kind="clock"
+   version="21.1"
+   start="clk_0.clk"
+   end="i2c_transcever_0.clock" />
+ <connection
+   kind="clock"
+   version="21.1"
+   start="clk_0.clk"
+   end="controller_0.clock" />
+ <connection
+   kind="conduit"
+   version="21.1"
+   start="i2c_transcever_0.port"
+   end="controller_0.i2c_port">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="21.1"
+   start="usart_0.usart_port"
+   end="controller_0.uart_port">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="reset"
+   version="21.1"
+   start="clk_0.clk_reset"
+   end="i2c_transcever_0.reset" />
+ <connection
+   kind="reset"
+   version="21.1"
+   start="clk_0.clk_reset"
+   end="usart_0.reset" />
+ <connection
+   kind="reset"
+   version="21.1"
+   start="clk_0.clk_reset"
+   end="controller_0.reset_n" />
+ <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
+ <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
+</system>

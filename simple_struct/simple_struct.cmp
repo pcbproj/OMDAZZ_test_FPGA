@@ -1,0 +1,16 @@
+	component simple_struct is
+		port (
+			clk_clk         : in  std_logic                    := 'X'; -- clk
+			code7_code7     : out std_logic_vector(7 downto 0);        -- code7
+			dig_sel_dig_sel : out std_logic_vector(3 downto 0);        -- dig_sel
+			leds_leds       : out std_logic_vector(3 downto 0);        -- leds
+			reset_reset_n   : in  std_logic                    := 'X'; -- reset_n
+			scl_in          : in  std_logic                    := 'X'; -- in
+			scl_oe          : out std_logic;                           -- oe
+			sda_in          : in  std_logic                    := 'X'; -- in
+			sda_oe          : out std_logic;                           -- oe
+			usart_rxd       : in  std_logic                    := 'X'; -- rxd
+			usart_txd       : out std_logic                            -- txd
+		);
+	end component simple_struct;
+

@@ -1,0 +1,51 @@
+Quartus Prime Archive log --	C:/Work/PCBteach/docs/!FPGA_Projects/FPGA_EP4CE6E22C8N/19_PlatformDesigner/19_PD_VHDL_OK/19_PD_VHDL_tmp_archive.qarlog
+
+Archive:	C:/Work/PCBteach/docs/!FPGA_Projects/FPGA_EP4CE6E22C8N/19_PlatformDesigner/19_PD_VHDL_OK/19_PD_VHDL_tmp_archive.qar
+Date:		Fri Dec  9 20:22:45 2022
+Quartus Prime		21.1.0 Build 842 10/21/2021 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Work/PCBteach/docs/!FPGA_Projects/FPGA_EP4CE6E22C8N/19_PlatformDesigner/19_PD_VHDL_OK/19_PD_VHDL.qpf
+C:/Work/PCBteach/docs/!FPGA_Projects/FPGA_EP4CE6E22C8N/19_PlatformDesigner/19_PD_VHDL_OK/19_PD_VHDL.qsf
+C:/Work/PCBteach/docs/!FPGA_Projects/FPGA_EP4CE6E22C8N/19_PlatformDesigner/19_PD_VHDL_OK/assignment_defaults.qdf
+C:/Work/PCBteach/docs/!FPGA_Projects/FPGA_EP4CE6E22C8N/19_PlatformDesigner/19_PD_VHDL_OK/components/controller.vhd
+C:/Work/PCBteach/docs/!FPGA_Projects/FPGA_EP4CE6E22C8N/19_PlatformDesigner/19_PD_VHDL_OK/components/i2c_master.vhd
+C:/Work/PCBteach/docs/!FPGA_Projects/FPGA_EP4CE6E22C8N/19_PlatformDesigner/19_PD_VHDL_OK/components/i2c_pkg.vhd
+C:/Work/PCBteach/docs/!FPGA_Projects/FPGA_EP4CE6E22C8N/19_PlatformDesigner/19_PD_VHDL_OK/components/pgen.vhd
+C:/Work/PCBteach/docs/!FPGA_Projects/FPGA_EP4CE6E22C8N/19_PlatformDesigner/19_PD_VHDL_OK/components/usart.vhd
+C:/Work/PCBteach/docs/!FPGA_Projects/FPGA_EP4CE6E22C8N/19_PlatformDesigner/19_PD_VHDL_OK/controller_hw.tcl
+C:/Work/PCBteach/docs/!FPGA_Projects/FPGA_EP4CE6E22C8N/19_PlatformDesigner/19_PD_VHDL_OK/i2c_transcever_hw.tcl
+C:/Work/PCBteach/docs/!FPGA_Projects/FPGA_EP4CE6E22C8N/19_PlatformDesigner/19_PD_VHDL_OK/simple_struct.qsys
+C:/Work/PCBteach/docs/!FPGA_Projects/FPGA_EP4CE6E22C8N/19_PlatformDesigner/19_PD_VHDL_OK/simple_struct.sopcinfo
+C:/Work/PCBteach/docs/!FPGA_Projects/FPGA_EP4CE6E22C8N/19_PlatformDesigner/19_PD_VHDL_OK/simple_struct/simple_struct.bsf
+C:/Work/PCBteach/docs/!FPGA_Projects/FPGA_EP4CE6E22C8N/19_PlatformDesigner/19_PD_VHDL_OK/simple_struct/simple_struct.cmp
+C:/Work/PCBteach/docs/!FPGA_Projects/FPGA_EP4CE6E22C8N/19_PlatformDesigner/19_PD_VHDL_OK/simple_struct/simple_struct.html
+C:/Work/PCBteach/docs/!FPGA_Projects/FPGA_EP4CE6E22C8N/19_PlatformDesigner/19_PD_VHDL_OK/simple_struct/simple_struct.xml
+C:/Work/PCBteach/docs/!FPGA_Projects/FPGA_EP4CE6E22C8N/19_PlatformDesigner/19_PD_VHDL_OK/simple_struct/simple_struct_bb.v
+C:/Work/PCBteach/docs/!FPGA_Projects/FPGA_EP4CE6E22C8N/19_PlatformDesigner/19_PD_VHDL_OK/simple_struct/simple_struct_generation.rpt
+C:/Work/PCBteach/docs/!FPGA_Projects/FPGA_EP4CE6E22C8N/19_PlatformDesigner/19_PD_VHDL_OK/simple_struct/simple_struct_generation_previous.rpt
+C:/Work/PCBteach/docs/!FPGA_Projects/FPGA_EP4CE6E22C8N/19_PlatformDesigner/19_PD_VHDL_OK/simple_struct/simple_struct_inst.v
+C:/Work/PCBteach/docs/!FPGA_Projects/FPGA_EP4CE6E22C8N/19_PlatformDesigner/19_PD_VHDL_OK/simple_struct/simple_struct_inst.vhd
+C:/Work/PCBteach/docs/!FPGA_Projects/FPGA_EP4CE6E22C8N/19_PlatformDesigner/19_PD_VHDL_OK/simple_struct/synthesis/simple_struct.debuginfo
+C:/Work/PCBteach/docs/!FPGA_Projects/FPGA_EP4CE6E22C8N/19_PlatformDesigner/19_PD_VHDL_OK/simple_struct/synthesis/simple_struct.qip
+C:/Work/PCBteach/docs/!FPGA_Projects/FPGA_EP4CE6E22C8N/19_PlatformDesigner/19_PD_VHDL_OK/simple_struct/synthesis/simple_struct.vhd
+C:/Work/PCBteach/docs/!FPGA_Projects/FPGA_EP4CE6E22C8N/19_PlatformDesigner/19_PD_VHDL_OK/simple_struct/synthesis/submodules/altera_reset_controller.sdc
+C:/Work/PCBteach/docs/!FPGA_Projects/FPGA_EP4CE6E22C8N/19_PlatformDesigner/19_PD_VHDL_OK/simple_struct/synthesis/submodules/altera_reset_controller.v
+C:/Work/PCBteach/docs/!FPGA_Projects/FPGA_EP4CE6E22C8N/19_PlatformDesigner/19_PD_VHDL_OK/simple_struct/synthesis/submodules/altera_reset_synchronizer.v
+C:/Work/PCBteach/docs/!FPGA_Projects/FPGA_EP4CE6E22C8N/19_PlatformDesigner/19_PD_VHDL_OK/simple_struct/synthesis/submodules/controller.vhd
+C:/Work/PCBteach/docs/!FPGA_Projects/FPGA_EP4CE6E22C8N/19_PlatformDesigner/19_PD_VHDL_OK/simple_struct/synthesis/submodules/controller.vhd.bak
+C:/Work/PCBteach/docs/!FPGA_Projects/FPGA_EP4CE6E22C8N/19_PlatformDesigner/19_PD_VHDL_OK/simple_struct/synthesis/submodules/i2c_master.vhd
+C:/Work/PCBteach/docs/!FPGA_Projects/FPGA_EP4CE6E22C8N/19_PlatformDesigner/19_PD_VHDL_OK/simple_struct/synthesis/submodules/i2c_pkg.vhd
+C:/Work/PCBteach/docs/!FPGA_Projects/FPGA_EP4CE6E22C8N/19_PlatformDesigner/19_PD_VHDL_OK/simple_struct/synthesis/submodules/usart.vhd
+C:/Work/PCBteach/docs/!FPGA_Projects/FPGA_EP4CE6E22C8N/19_PlatformDesigner/19_PD_VHDL_OK/top_level.vhd
+C:/Work/PCBteach/docs/!FPGA_Projects/FPGA_EP4CE6E22C8N/19_PlatformDesigner/19_PD_VHDL_OK/usart_hw.tcl
+	======= Total: 34 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Fri Dec  9 20:22:46 2022
+Source archive file:	C:/Work/PCBteach/docs/!FPGA_Projects/FPGA_EP4CE6E22C8N/19_PlatformDesigner/19_PD_VHDL_OK/19_PD_VHDL_tmp_archive.qar
+Archive was extracted into	C:/Work/PCBteach/docs/!FPGA_Projects/FPGA_EP4CE6E22C8N/19_PlatformDesigner/19_PD_VHDL/
+		 - successfully.
