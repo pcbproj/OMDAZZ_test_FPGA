@@ -1,6 +1,6 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="bf023e2d33f37b06bb41"/>
+    <hash md5_digest_80b="725f9b1a2eabad99be83"/>
   </project>
   <file_info>
     <file device="EP4CE6E22C8" path="19_PD_VHDL.sof" usercode="0xFFFFFFFF"/>
@@ -8,7 +8,7 @@
   <sld_infos>
     <sld_info hpath="simple_struct:u0" name="u0">
       <assignment_values>
-        <assignment_value text="QSYS_NAME simple_struct HAS_SOPCINFO 1 GENERATION_ID 1717400981"/>
+        <assignment_value text="QSYS_NAME simple_struct HAS_SOPCINFO 1 GENERATION_ID 1717433172"/>
       </assignment_values>
       <parameters/>
     </sld_info>

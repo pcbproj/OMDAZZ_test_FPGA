@@ -1,5 +1,5 @@
 Fitter report for 19_PD_VHDL
-Mon Jun  3 10:49:59 2024
+Mon Jun  3 19:46:27 2024
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -69,7 +69,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Mon Jun  3 10:49:59 2024       ;
+; Fitter Status                      ; Successful - Mon Jun  3 19:46:27 2024       ;
 ; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; 19_PD_VHDL                                  ;
 ; Top-level Entity Name              ; top_level                                   ;
@@ -152,16 +152,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
+; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.04        ;
+; Average used               ; 1.05        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.4%      ;
-;     Processors 3-4         ;   1.3%      ;
+;     Processor 2            ;   1.6%      ;
+;     Processors 3-4         ;   1.6%      ;
 +----------------------------+-------------+
 
 
@@ -203,7 +203,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/19_PD_VHDL.pin.
+The pin-out file can be found in D:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/OMDAZZ_test_FPGA/19_PD_VHDL.pin.
 
 
 +-------------------------------------------------------------------+
@@ -1109,50 +1109,50 @@ Info (169124): Fitter converted 5 user pins into dedicated programming pins
     Info (169125): Pin ~ALTERA_nCEO~ is reserved at location 101
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
 Warning (335093): The Timing Analyzer is analyzing 8 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
-Info (332104): Reading SDC File: 'c:/work/pcbteach/02_myproj/fpga/omdazz_test/db/ip/simple_struct/submodules/altera_reset_controller.sdc'
+Info (332104): Reading SDC File: 'd:/work/pcbteach/docs/02_my_projects/fpga_projects/omdazz_test/omdazz_test_fpga/db/ip/simple_struct/submodules/altera_reset_controller.sdc'
 Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info (176353): Automatically promoted node clk~input (placed in PIN 23 (CLK1, DIFFCLK_0n)) File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/top_level.vhd Line: 8
+Info (176353): Automatically promoted node clk~input (placed in PIN 23 (CLK1, DIFFCLK_0n)) File: D:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/OMDAZZ_test_FPGA/top_level.vhd Line: 8
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G2
-Info (176353): Automatically promoted node simple_struct:u0|controller:controller_0|wr_ind_pulse  File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/db/ip/simple_struct/submodules/controller.vhd Line: 127
+Info (176353): Automatically promoted node simple_struct:u0|controller:controller_0|wr_ind_pulse  File: D:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/OMDAZZ_test_FPGA/db/ip/simple_struct/submodules/controller.vhd Line: 127
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node simple_struct:u0|controller:controller_0|segment_7_hex:seg_7_indicstor|c_sel[3] File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/segment_7_hex.vhd Line: 91
-        Info (176357): Destination node simple_struct:u0|controller:controller_0|segment_7_hex:seg_7_indicstor|c_sel[2] File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/segment_7_hex.vhd Line: 91
-        Info (176357): Destination node simple_struct:u0|controller:controller_0|segment_7_hex:seg_7_indicstor|c_sel[1] File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/segment_7_hex.vhd Line: 91
-        Info (176357): Destination node simple_struct:u0|controller:controller_0|segment_7_hex:seg_7_indicstor|dec[0] File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/segment_7_hex.vhd Line: 91
-        Info (176357): Destination node simple_struct:u0|controller:controller_0|segment_7_hex:seg_7_indicstor|dec[6] File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/segment_7_hex.vhd Line: 91
-        Info (176357): Destination node simple_struct:u0|controller:controller_0|segment_7_hex:seg_7_indicstor|dec[5] File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/segment_7_hex.vhd Line: 91
-        Info (176357): Destination node simple_struct:u0|controller:controller_0|segment_7_hex:seg_7_indicstor|dec[4] File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/segment_7_hex.vhd Line: 91
-        Info (176357): Destination node simple_struct:u0|controller:controller_0|segment_7_hex:seg_7_indicstor|dec[3] File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/segment_7_hex.vhd Line: 91
-        Info (176357): Destination node simple_struct:u0|controller:controller_0|segment_7_hex:seg_7_indicstor|dec[2] File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/segment_7_hex.vhd Line: 91
-        Info (176357): Destination node simple_struct:u0|controller:controller_0|segment_7_hex:seg_7_indicstor|dec[1] File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/segment_7_hex.vhd Line: 91
+        Info (176357): Destination node simple_struct:u0|controller:controller_0|segment_7_hex:seg_7_indicstor|c_sel[3] File: D:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/OMDAZZ_test_FPGA/components/segment_7_hex.vhd Line: 91
+        Info (176357): Destination node simple_struct:u0|controller:controller_0|segment_7_hex:seg_7_indicstor|c_sel[2] File: D:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/OMDAZZ_test_FPGA/components/segment_7_hex.vhd Line: 91
+        Info (176357): Destination node simple_struct:u0|controller:controller_0|segment_7_hex:seg_7_indicstor|c_sel[1] File: D:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/OMDAZZ_test_FPGA/components/segment_7_hex.vhd Line: 91
+        Info (176357): Destination node simple_struct:u0|controller:controller_0|segment_7_hex:seg_7_indicstor|dec[0] File: D:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/OMDAZZ_test_FPGA/components/segment_7_hex.vhd Line: 91
+        Info (176357): Destination node simple_struct:u0|controller:controller_0|segment_7_hex:seg_7_indicstor|dec[6] File: D:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/OMDAZZ_test_FPGA/components/segment_7_hex.vhd Line: 91
+        Info (176357): Destination node simple_struct:u0|controller:controller_0|segment_7_hex:seg_7_indicstor|dec[5] File: D:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/OMDAZZ_test_FPGA/components/segment_7_hex.vhd Line: 91
+        Info (176357): Destination node simple_struct:u0|controller:controller_0|segment_7_hex:seg_7_indicstor|dec[4] File: D:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/OMDAZZ_test_FPGA/components/segment_7_hex.vhd Line: 91
+        Info (176357): Destination node simple_struct:u0|controller:controller_0|segment_7_hex:seg_7_indicstor|dec[3] File: D:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/OMDAZZ_test_FPGA/components/segment_7_hex.vhd Line: 91
+        Info (176357): Destination node simple_struct:u0|controller:controller_0|segment_7_hex:seg_7_indicstor|dec[2] File: D:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/OMDAZZ_test_FPGA/components/segment_7_hex.vhd Line: 91
+        Info (176357): Destination node simple_struct:u0|controller:controller_0|segment_7_hex:seg_7_indicstor|dec[1] File: D:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/OMDAZZ_test_FPGA/components/segment_7_hex.vhd Line: 91
         Info (176358): Non-global destination nodes limited to 10 nodes
-Info (176353): Automatically promoted node simple_struct:u0|usart:usart_0|bit_clk  File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/db/ip/simple_struct/submodules/usart.vhd Line: 33
+Info (176353): Automatically promoted node simple_struct:u0|usart:usart_0|bit_clk  File: D:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/OMDAZZ_test_FPGA/db/ip/simple_struct/submodules/usart.vhd Line: 33
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node simple_struct:u0|usart:usart_0|bit_clk~0 File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/db/ip/simple_struct/submodules/usart.vhd Line: 33
-Info (176353): Automatically promoted node simple_struct:u0|controller:controller_0|segment_7_hex:seg_7_indicstor|clk_1kHz  File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/segment_7_hex.vhd Line: 34
+        Info (176357): Destination node simple_struct:u0|usart:usart_0|bit_clk~0 File: D:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/OMDAZZ_test_FPGA/db/ip/simple_struct/submodules/usart.vhd Line: 33
+Info (176353): Automatically promoted node simple_struct:u0|controller:controller_0|segment_7_hex:seg_7_indicstor|clk_1kHz  File: D:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/OMDAZZ_test_FPGA/components/segment_7_hex.vhd Line: 34
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node simple_struct:u0|controller:controller_0|segment_7_hex:seg_7_indicstor|clk_1kHz~0 File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/components/segment_7_hex.vhd Line: 34
-Info (176353): Automatically promoted node en~input (placed in PIN 25 (CLK3, DIFFCLK_1n)) File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/top_level.vhd Line: 9
+        Info (176357): Destination node simple_struct:u0|controller:controller_0|segment_7_hex:seg_7_indicstor|clk_1kHz~0 File: D:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/OMDAZZ_test_FPGA/components/segment_7_hex.vhd Line: 34
+Info (176353): Automatically promoted node en~input (placed in PIN 25 (CLK3, DIFFCLK_1n)) File: D:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/OMDAZZ_test_FPGA/top_level.vhd Line: 9
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G3
-Info (176353): Automatically promoted node simple_struct:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1|altera_reset_synchronizer_int_chain_out  File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/db/ip/simple_struct/submodules/altera_reset_synchronizer.v Line: 62
+Info (176353): Automatically promoted node simple_struct:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1|altera_reset_synchronizer_int_chain_out  File: D:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/OMDAZZ_test_FPGA/db/ip/simple_struct/submodules/altera_reset_synchronizer.v Line: 62
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node simple_struct:u0|controller:controller_0|RegRdDone File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/db/ip/simple_struct/submodules/controller.vhd Line: 114
-        Info (176357): Destination node simple_struct:u0|controller:controller_0|I2C_ByteCnt[3] File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/db/ip/simple_struct/submodules/controller.vhd Line: 197
-        Info (176357): Destination node simple_struct:u0|controller:controller_0|I2C_ByteCnt[2] File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/db/ip/simple_struct/submodules/controller.vhd Line: 197
-        Info (176357): Destination node simple_struct:u0|controller:controller_0|I2C_ByteCnt[1] File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/db/ip/simple_struct/submodules/controller.vhd Line: 197
-        Info (176357): Destination node simple_struct:u0|usart:usart_0|send_data[8]~0 File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/db/ip/simple_struct/submodules/usart.vhd Line: 74
-        Info (176357): Destination node simple_struct:u0|i2c_master:i2c_transcever_0|data_clk_prev File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/db/ip/simple_struct/submodules/i2c_master.vhd Line: 35
-        Info (176357): Destination node simple_struct:u0|i2c_master:i2c_transcever_0|scl_clk File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/db/ip/simple_struct/submodules/i2c_master.vhd Line: 36
-        Info (176357): Destination node simple_struct:u0|controller:controller_0|uart_tx_data[7]~0 File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/db/ip/simple_struct/submodules/controller.vhd Line: 197
-        Info (176357): Destination node simple_struct:u0|i2c_master:i2c_transcever_0|data_clk File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/db/ip/simple_struct/submodules/i2c_master.vhd Line: 34
-        Info (176357): Destination node simple_struct:u0|controller:controller_0|I2C_Load File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/db/ip/simple_struct/submodules/controller.vhd Line: 197
+        Info (176357): Destination node simple_struct:u0|controller:controller_0|RegRdDone File: D:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/OMDAZZ_test_FPGA/db/ip/simple_struct/submodules/controller.vhd Line: 114
+        Info (176357): Destination node simple_struct:u0|controller:controller_0|I2C_ByteCnt[3] File: D:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/OMDAZZ_test_FPGA/db/ip/simple_struct/submodules/controller.vhd Line: 197
+        Info (176357): Destination node simple_struct:u0|controller:controller_0|I2C_ByteCnt[2] File: D:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/OMDAZZ_test_FPGA/db/ip/simple_struct/submodules/controller.vhd Line: 197
+        Info (176357): Destination node simple_struct:u0|controller:controller_0|I2C_ByteCnt[1] File: D:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/OMDAZZ_test_FPGA/db/ip/simple_struct/submodules/controller.vhd Line: 197
+        Info (176357): Destination node simple_struct:u0|usart:usart_0|send_data[8]~0 File: D:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/OMDAZZ_test_FPGA/db/ip/simple_struct/submodules/usart.vhd Line: 74
+        Info (176357): Destination node simple_struct:u0|i2c_master:i2c_transcever_0|data_clk_prev File: D:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/OMDAZZ_test_FPGA/db/ip/simple_struct/submodules/i2c_master.vhd Line: 35
+        Info (176357): Destination node simple_struct:u0|i2c_master:i2c_transcever_0|scl_clk File: D:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/OMDAZZ_test_FPGA/db/ip/simple_struct/submodules/i2c_master.vhd Line: 36
+        Info (176357): Destination node simple_struct:u0|controller:controller_0|uart_tx_data[7]~0 File: D:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/OMDAZZ_test_FPGA/db/ip/simple_struct/submodules/controller.vhd Line: 197
+        Info (176357): Destination node simple_struct:u0|i2c_master:i2c_transcever_0|data_clk File: D:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/OMDAZZ_test_FPGA/db/ip/simple_struct/submodules/i2c_master.vhd Line: 34
+        Info (176357): Destination node simple_struct:u0|controller:controller_0|I2C_Load File: D:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/OMDAZZ_test_FPGA/db/ip/simple_struct/submodules/controller.vhd Line: 197
         Info (176358): Non-global destination nodes limited to 10 nodes
 Info (176233): Starting register packing
 Info (176235): Finished register packing
@@ -1169,34 +1169,34 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
     Info (170196): Router estimated peak interconnect usage is 2% of the available device resources in the region that extends from location X23_Y12 to location X34_Y24
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
-Info (11888): Total time spent on timing analysis during the Fitter is 1.12 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
+Info (11888): Total time spent on timing analysis during the Fitter is 0.61 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (169177): 9 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing Cyclone IV E Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
-    Info (169178): Pin SDA uses I/O standard 3.3-V LVTTL at 113 File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/top_level.vhd Line: 15
-    Info (169178): Pin SCL uses I/O standard 3.3-V LVTTL at 112 File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/top_level.vhd Line: 16
-    Info (169178): Pin keys_in[0] uses I/O standard 3.3-V LVTTL at 88 File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/top_level.vhd Line: 11
-    Info (169178): Pin keys_in[1] uses I/O standard 3.3-V LVTTL at 89 File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/top_level.vhd Line: 11
-    Info (169178): Pin keys_in[2] uses I/O standard 3.3-V LVTTL at 90 File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/top_level.vhd Line: 11
-    Info (169178): Pin keys_in[3] uses I/O standard 3.3-V LVTTL at 91 File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/top_level.vhd Line: 11
-    Info (169178): Pin clk uses I/O standard 3.3-V LVTTL at 23 File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/top_level.vhd Line: 8
-    Info (169178): Pin en uses I/O standard 3.3-V LVTTL at 25 File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/top_level.vhd Line: 9
-    Info (169178): Pin RXD uses I/O standard 3.3-V LVTTL at 115 File: C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/top_level.vhd Line: 14
-Info (144001): Generated suppressed messages file C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/19_PD_VHDL.fit.smsg
+    Info (169178): Pin SDA uses I/O standard 3.3-V LVTTL at 113 File: D:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/OMDAZZ_test_FPGA/top_level.vhd Line: 15
+    Info (169178): Pin SCL uses I/O standard 3.3-V LVTTL at 112 File: D:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/OMDAZZ_test_FPGA/top_level.vhd Line: 16
+    Info (169178): Pin keys_in[0] uses I/O standard 3.3-V LVTTL at 88 File: D:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/OMDAZZ_test_FPGA/top_level.vhd Line: 11
+    Info (169178): Pin keys_in[1] uses I/O standard 3.3-V LVTTL at 89 File: D:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/OMDAZZ_test_FPGA/top_level.vhd Line: 11
+    Info (169178): Pin keys_in[2] uses I/O standard 3.3-V LVTTL at 90 File: D:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/OMDAZZ_test_FPGA/top_level.vhd Line: 11
+    Info (169178): Pin keys_in[3] uses I/O standard 3.3-V LVTTL at 91 File: D:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/OMDAZZ_test_FPGA/top_level.vhd Line: 11
+    Info (169178): Pin clk uses I/O standard 3.3-V LVTTL at 23 File: D:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/OMDAZZ_test_FPGA/top_level.vhd Line: 8
+    Info (169178): Pin en uses I/O standard 3.3-V LVTTL at 25 File: D:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/OMDAZZ_test_FPGA/top_level.vhd Line: 9
+    Info (169178): Pin RXD uses I/O standard 3.3-V LVTTL at 115 File: D:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/OMDAZZ_test_FPGA/top_level.vhd Line: 14
+Info (144001): Generated suppressed messages file D:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/OMDAZZ_test_FPGA/19_PD_VHDL.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 5506 megabytes
-    Info: Processing ended: Mon Jun  3 10:49:59 2024
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:12
+    Info: Peak virtual memory: 5512 megabytes
+    Info: Processing ended: Mon Jun  3 19:46:27 2024
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:09
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/work/pcbteach/02_myproj/FPGA/OMDAZZ_test/19_PD_VHDL.fit.smsg.
+The suppressed messages can be found in D:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/OMDAZZ_test_FPGA/19_PD_VHDL.fit.smsg.
 
 

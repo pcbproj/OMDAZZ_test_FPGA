@@ -1,5 +1,5 @@
 Flow report for 19_PD_VHDL
-Mon Jun  3 10:50:07 2024
+Mon Jun  3 19:46:32 2024
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon Jun  3 10:50:03 2024       ;
+; Flow Status                        ; Successful - Mon Jun  3 19:46:29 2024       ;
 ; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; 19_PD_VHDL                                  ;
 ; Top-level Entity Name              ; top_level                                   ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/03/2024 10:49:21 ;
+; Start date & time ; 06/03/2024 19:46:00 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; 19_PD_VHDL          ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 240520962108763.171740096105628        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 181124895956890.171743316017896        ; --            ; --          ; --         ;
 ; ENABLE_SIGNALTAP                    ; On                                     ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
@@ -95,11 +95,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:27     ; 1.0                     ; 4815 MB             ; 00:00:56                           ;
-; Fitter               ; 00:00:10     ; 1.0                     ; 5506 MB             ; 00:00:12                           ;
-; Assembler            ; 00:00:01     ; 1.0                     ; 4723 MB             ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:03     ; 1.1                     ; 4776 MB             ; 00:00:03                           ;
-; Total                ; 00:00:41     ; --                      ; --                  ; 00:01:12                           ;
+; Analysis & Synthesis ; 00:00:17     ; 1.0                     ; 4840 MB             ; 00:00:40                           ;
+; Fitter               ; 00:00:08     ; 1.0                     ; 5512 MB             ; 00:00:08                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4727 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4781 MB             ; 00:00:02                           ;
+; Total                ; 00:00:28     ; --                      ; --                  ; 00:00:51                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -108,10 +108,10 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; Stas-Note        ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; Stas-Note        ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; Stas-Note        ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; Stas-Note        ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; User-PC          ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; User-PC          ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; User-PC          ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; User-PC          ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
