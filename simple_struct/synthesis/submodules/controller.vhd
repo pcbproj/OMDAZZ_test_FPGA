@@ -7,7 +7,7 @@ USE work.i2c_pkg.ALL;
 entity controller is
 	port(
 		en			: in  std_logic;
-		clk			: in  std_logic;
+		clk		: in  std_logic;
 		leds	 	: out std_logic_vector( 3 downto 0 );
 		
 		code7		: out std_logic_vector(7 downto 0);
@@ -61,13 +61,13 @@ architecture behave of controller is
 	END component pgen;
 	
 	
-	component segment_7 is
+	component segment_7_hex is
     port(
 		clk       : in  std_logic;
 		en        : in  std_logic;
 		dec_in    : in  std_logic_vector(15 downto 0);-- all 4 digits to show
 		dp_in     : IN  STD_LOGIC_VECTOR(3 DOWNTO 0);
-		wr_valid_n: IN  STD_LOGIC;
+		wr_valid  : IN  STD_LOGIC;
 		c_sel     : out std_logic_vector(3 downto 0); -- anod selection
 		code7_dp  : out std_logic_vector(7 downto 0)
     );
@@ -123,7 +123,7 @@ architecture behave of controller is
 	
 	SIGNAL Temper  		: STD_LOGIC_VECTOR( 7 DOWNTO 0 );
 	
-	SIGNAL temper_ind7	: STD_LOGIC_VECTOR(7 DOWNTO 0);
+	SIGNAL temper_ind7	: STD_LOGIC_VECTOR(15 DOWNTO 0);
 	SIGNAL wr_ind_pulse	: STD_LOGIC;
 	
 	
@@ -143,13 +143,14 @@ begin
 		Output 	=>	StartPulse		-- generate start pulse 1 cicle clk width every second 
 	);
 	
-	seg_7_indicstor:	segment_7 
+	seg_7_indicstor:	segment_7_hex 
     port map(
 		clk       	=> clk,
-		en        	=> '1',
+--		en        	=> '1',
+		en        	=> reset_n,
 		dec_in    	=> temper_ind7,	-- all 4 digits to show
 		dp_in     	=> "0000",
-		wr_valid_n	=> wr_ind_pulse,
+		wr_valid 	=> wr_ind_pulse,
 		c_sel     	=> dig_sel,	-- anod selection
 		code7_dp  	=> code7
     );
@@ -179,7 +180,7 @@ begin
 			count_1Hz 	<= 0;
 			clk_1Hz		<= '0';
 		elsif rising_edge( clk ) then
-			if count_1Hz < wait_500ms/2 then
+			if count_1Hz < wait_500ms/8 then
 				count_1Hz <= count_1Hz + 1;
 			else	
 				count_1Hz <= 0;
@@ -198,6 +199,8 @@ begin
 			PresState <= IDLE;
 			show_cnt 	:= 0;
 			Temper		 <= ( others => '0' );
+			temper_ind7 <= (OTHERS => '0');
+			wr_ind_pulse <= '0';
 			
 			uart_tx_dv 		<= '0';
 		elsif rising_edge( clk ) then
@@ -213,7 +216,7 @@ begin
 				RegRdDone  	<= '0';
 				I2C_BusyPrev <= '0';
 				wr_ind_pulse <= '0';
-				temper_ind7 <= (OTHERS => '0');
+--				temper_ind7 <= (OTHERS => '0');
 				
 				show_cnt 	:= 0;
 				
@@ -221,18 +224,21 @@ begin
 				
 				uart_tx_dv 		<= '0';
 			
-				IF I2C_Busy = '0' THEN
-					IF StartPulse = '1' THEN
-						PresState <= READ_TEMPER; 
-					END IF;
+				IF uart_rx_ready = '1' THEN
+					PresState <= UART_RD;
 				ELSE
-					
-					IF uart_rx_ready = '1' THEN
-						PresState <= UART_RD;
+										
+					IF I2C_Busy = '0' THEN
+						IF StartPulse = '1' THEN
+							PresState <= READ_TEMPER; 
+						END IF;
 					ELSE
 						PresState <= IDLE;
 					END IF;
 				END IF;
+				
+				
+				
 			
 			when READ_TEMPER =>
 				if RegRdDone = '0' then    
@@ -276,7 +282,7 @@ begin
 				end if;
 			
 			when UART_RD =>
-				temper_ind7 <= uart_rx_data(7 DOWNTO 0);
+				temper_ind7 <= uart_rx_data;
 				wr_ind_pulse <= '1';
 				PresState <= IDLE;
 			

@@ -85,6 +85,30 @@
    {
       datum _originalDeviceFamily
       {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element simple_struct
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element simple_struct
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element simple_struct
+   {
+      datum _originalDeviceFamily
+      {
          value = "Cyclone IV E";
          type = "String";
       }
@@ -93,23 +117,7 @@
    {
       datum _originalDeviceFamily
       {
-         value = "Cyclone V";
-         type = "String";
-      }
-   }
-   element simple_struct
-   {
-      datum _originalDeviceFamily
-      {
-         value = "Cyclone V";
-         type = "String";
-      }
-   }
-   element simple_struct
-   {
-      datum _originalDeviceFamily
-      {
-         value = "Cyclone V";
+         value = "Cyclone IV E";
          type = "String";
       }
    }
@@ -215,12 +223,12 @@
    kind="reset"
    version="21.1"
    start="clk_0.clk_reset"
-   end="i2c_transcever_0.reset" />
+   end="usart_0.reset" />
  <connection
    kind="reset"
    version="21.1"
    start="clk_0.clk_reset"
-   end="usart_0.reset" />
+   end="i2c_transcever_0.reset" />
  <connection
    kind="reset"
    version="21.1"

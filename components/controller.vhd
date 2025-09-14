@@ -7,7 +7,7 @@ USE work.i2c_pkg.ALL;
 entity controller is
 	port(
 		en			: in  std_logic;
-		clk			: in  std_logic;
+		clk		: in  std_logic;
 		leds	 	: out std_logic_vector( 3 downto 0 );
 		
 		code7		: out std_logic_vector(7 downto 0);
@@ -146,7 +146,8 @@ begin
 	seg_7_indicstor:	segment_7_hex 
     port map(
 		clk       	=> clk,
-		en        	=> '1',
+--		en        	=> '1',
+		en        	=> reset_n,
 		dec_in    	=> temper_ind7,	-- all 4 digits to show
 		dp_in     	=> "0000",
 		wr_valid 	=> wr_ind_pulse,

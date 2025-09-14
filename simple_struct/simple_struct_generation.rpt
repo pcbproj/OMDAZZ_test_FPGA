@@ -1,6 +1,6 @@
 Info: Starting: Create block symbol file (.bsf)
-Info: qsys-generate C:\Work\PCBteach\docs\02_MY_projects\FPGA_Projects\OMDAZZ_test\simple_struct.qsys --block-symbol-file --output-directory=C:\Work\PCBteach\docs\02_MY_projects\FPGA_Projects\OMDAZZ_test\simple_struct --family="Cyclone IV E" --part=EP4CE6E22C8
-Progress: Loading OMDAZZ_test/simple_struct.qsys
+Info: qsys-generate D:\Work\PCBteach\02_MY_projects\FPGA\OMDAZZ_test\OMDAZZ_test_FPGA\simple_struct.qsys --block-symbol-file --output-directory=D:\Work\PCBteach\02_MY_projects\FPGA\OMDAZZ_test\OMDAZZ_test_FPGA\simple_struct --family="Cyclone IV E" --part=EP4CE6E22C8
+Progress: Loading OMDAZZ_test_FPGA/simple_struct.qsys
 Progress: Reading input file
 Progress: Adding clk_0 [clock_source 21.1]
 Progress: Parameterizing module clk_0
@@ -18,8 +18,8 @@ Info: qsys-generate succeeded.
 Info: Finished: Create block symbol file (.bsf)
 Info: 
 Info: Starting: Create HDL design files for synthesis
-Info: qsys-generate C:\Work\PCBteach\docs\02_MY_projects\FPGA_Projects\OMDAZZ_test\simple_struct.qsys --synthesis=VHDL --output-directory=C:\Work\PCBteach\docs\02_MY_projects\FPGA_Projects\OMDAZZ_test\simple_struct\synthesis --family="Cyclone IV E" --part=EP4CE6E22C8
-Progress: Loading OMDAZZ_test/simple_struct.qsys
+Info: qsys-generate D:\Work\PCBteach\02_MY_projects\FPGA\OMDAZZ_test\OMDAZZ_test_FPGA\simple_struct.qsys --synthesis=VHDL --output-directory=D:\Work\PCBteach\02_MY_projects\FPGA\OMDAZZ_test\OMDAZZ_test_FPGA\simple_struct\synthesis --family="Cyclone IV E" --part=EP4CE6E22C8
+Progress: Loading OMDAZZ_test_FPGA/simple_struct.qsys
 Progress: Reading input file
 Progress: Adding clk_0 [clock_source 21.1]
 Progress: Parameterizing module clk_0

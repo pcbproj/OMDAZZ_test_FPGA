@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE6E22) Path("C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/") File("OMDAZZ_TEST.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE6E22) Path("D:/Work/PCBteach/02_MY_projects/FPGA/OMDAZZ_test/OMDAZZ_test_FPGA/") File("19_PD_VHDL.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

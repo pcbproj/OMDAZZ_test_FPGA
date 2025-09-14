@@ -6,7 +6,7 @@ entity top_level is
 	port(
 		
 		clk       	: in	std_logic;
-		en        	: in	std_logic;
+		reset       : in	std_logic; -- low active
 		leds_out		: out	std_logic_vector( 3 downto 0 );
 		keys_in		: in	std_logic_vector( 3 downto 0);
 		buzer			: out std_logic;
@@ -53,7 +53,7 @@ begin
         port map (
             clk_clk       => clk, 				--   clk.clk
             leds_leds     =>  open, --leds_out, 		--      .leds
-            reset_reset_n =>  en, 				-- reset.reset_n
+            reset_reset_n =>  reset, 				-- reset.reset_n
 				code7_code7     =>  seg7_code,     --   code7.code7
 				dig_sel_dig_sel =>  dig_sel, 
             scl_in        =>  top_scl_in,		--   scl.in

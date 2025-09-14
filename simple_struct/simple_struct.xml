@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deploy
- date="2023.12.14.15:27:11"
- outputDirectory="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/simple_struct/">
+ date="2025.09.14.11:48:40"
+ outputDirectory="D:/Work/PCBteach/02_MY_projects/FPGA/OMDAZZ_test/OMDAZZ_test_FPGA/simple_struct/">
  <perimeter>
   <parameter
      name="AUTO_GENERATION_ID"
@@ -98,13 +98,13 @@
  </perimeter>
  <entity
    path=""
-   parameterizationKey="simple_struct:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=EP4CE6E22C8,AUTO_DEVICE_FAMILY=Cyclone IV E,AUTO_DEVICE_SPEEDGRADE=8,AUTO_GENERATION_ID=1702556831,AUTO_UNIQUE_ID=(clock_source:21.1:clockFrequency=50000000,clockFrequencyKnown=true,inputClockFrequency=0,resetSynchronousEdges=NONE)(controller:1.0:)(i2c_transcever:1.0:bus_clk=100000,input_clk=50000000)(usart:1.0:BAUD_RATE=9600,CLK_FREQ_HZ=50000000,DATA_BITS=8,PARITY=0,STOP_BITS=1)(clock:21.1:)(clock:21.1:)(clock:21.1:)(conduit:21.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:21.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(reset:21.1:)(reset:21.1:)(reset:21.1:)"
+   parameterizationKey="simple_struct:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=EP4CE6E22C8,AUTO_DEVICE_FAMILY=Cyclone IV E,AUTO_DEVICE_SPEEDGRADE=8,AUTO_GENERATION_ID=1757839719,AUTO_UNIQUE_ID=(clock_source:21.1:clockFrequency=50000000,clockFrequencyKnown=true,inputClockFrequency=0,resetSynchronousEdges=NONE)(controller:1.0:)(i2c_transcever:1.0:bus_clk=100000,input_clk=50000000)(usart:1.0:BAUD_RATE=9600,CLK_FREQ_HZ=50000000,DATA_BITS=8,PARITY=0,STOP_BITS=1)(clock:21.1:)(clock:21.1:)(clock:21.1:)(conduit:21.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:21.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(reset:21.1:)(reset:21.1:)(reset:21.1:)"
    instancePathKey="simple_struct"
    kind="simple_struct"
    version="1.0"
    name="simple_struct">
   <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
-  <parameter name="AUTO_GENERATION_ID" value="1702556831" />
+  <parameter name="AUTO_GENERATION_ID" value="1757839719" />
   <parameter name="AUTO_DEVICE" value="EP4CE6E22C8" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
   <parameter name="AUTO_CLK_RESET_DOMAIN" value="-1" />
@@ -113,50 +113,50 @@
   <parameter name="AUTO_DEVICE_SPEEDGRADE" value="8" />
   <generatedFiles>
    <file
-       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/simple_struct/synthesis/simple_struct.vhd"
+       path="D:/Work/PCBteach/02_MY_projects/FPGA/OMDAZZ_test/OMDAZZ_test_FPGA/simple_struct/synthesis/simple_struct.vhd"
        type="VHDL" />
   </generatedFiles>
   <childGeneratedFiles>
    <file
-       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/simple_struct/synthesis/submodules/controller.vhd"
+       path="D:/Work/PCBteach/02_MY_projects/FPGA/OMDAZZ_test/OMDAZZ_test_FPGA/simple_struct/synthesis/submodules/controller.vhd"
        type="VHDL"
        attributes="TOP_LEVEL_FILE" />
    <file
-       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/simple_struct/synthesis/submodules/i2c_pkg.vhd"
+       path="D:/Work/PCBteach/02_MY_projects/FPGA/OMDAZZ_test/OMDAZZ_test_FPGA/simple_struct/synthesis/submodules/i2c_pkg.vhd"
        type="VHDL"
        attributes="" />
    <file
-       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/simple_struct/synthesis/submodules/i2c_master.vhd"
+       path="D:/Work/PCBteach/02_MY_projects/FPGA/OMDAZZ_test/OMDAZZ_test_FPGA/simple_struct/synthesis/submodules/i2c_master.vhd"
        type="VHDL"
        attributes="TOP_LEVEL_FILE" />
    <file
-       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/simple_struct/synthesis/submodules/usart.vhd"
+       path="D:/Work/PCBteach/02_MY_projects/FPGA/OMDAZZ_test/OMDAZZ_test_FPGA/simple_struct/synthesis/submodules/usart.vhd"
        type="VHDL"
        attributes="TOP_LEVEL_FILE" />
    <file
-       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/simple_struct/synthesis/submodules/altera_reset_controller.v"
+       path="D:/Work/PCBteach/02_MY_projects/FPGA/OMDAZZ_test/OMDAZZ_test_FPGA/simple_struct/synthesis/submodules/altera_reset_controller.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/simple_struct/synthesis/submodules/altera_reset_synchronizer.v"
+       path="D:/Work/PCBteach/02_MY_projects/FPGA/OMDAZZ_test/OMDAZZ_test_FPGA/simple_struct/synthesis/submodules/altera_reset_synchronizer.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/simple_struct/synthesis/submodules/altera_reset_controller.sdc"
+       path="D:/Work/PCBteach/02_MY_projects/FPGA/OMDAZZ_test/OMDAZZ_test_FPGA/simple_struct/synthesis/submodules/altera_reset_controller.sdc"
        type="SDC"
        attributes="" />
   </childGeneratedFiles>
   <sourceFiles>
    <file
-       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/simple_struct.qsys" />
+       path="D:/Work/PCBteach/02_MY_projects/FPGA/OMDAZZ_test/OMDAZZ_test_FPGA/simple_struct.qsys" />
   </sourceFiles>
   <childSourceFiles>
    <file
-       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/controller_hw.tcl" />
+       path="D:/Work/PCBteach/02_MY_projects/FPGA/OMDAZZ_test/OMDAZZ_test_FPGA/controller_hw.tcl" />
    <file
-       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/i2c_transcever_hw.tcl" />
+       path="D:/Work/PCBteach/02_MY_projects/FPGA/OMDAZZ_test/OMDAZZ_test_FPGA/i2c_transcever_hw.tcl" />
    <file
-       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/usart_hw.tcl" />
+       path="D:/Work/PCBteach/02_MY_projects/FPGA/OMDAZZ_test/OMDAZZ_test_FPGA/usart_hw.tcl" />
    <file
        path="C:/intelfpga_lite/21.1/ip/altera/merlin/altera_reset_controller/altera_reset_controller_hw.tcl" />
   </childSourceFiles>
@@ -201,18 +201,18 @@
    name="controller">
   <generatedFiles>
    <file
-       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/simple_struct/synthesis/submodules/controller.vhd"
+       path="D:/Work/PCBteach/02_MY_projects/FPGA/OMDAZZ_test/OMDAZZ_test_FPGA/simple_struct/synthesis/submodules/controller.vhd"
        type="VHDL"
        attributes="TOP_LEVEL_FILE" />
    <file
-       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/simple_struct/synthesis/submodules/i2c_pkg.vhd"
+       path="D:/Work/PCBteach/02_MY_projects/FPGA/OMDAZZ_test/OMDAZZ_test_FPGA/simple_struct/synthesis/submodules/i2c_pkg.vhd"
        type="VHDL"
        attributes="" />
   </generatedFiles>
   <childGeneratedFiles/>
   <sourceFiles>
    <file
-       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/controller_hw.tcl" />
+       path="D:/Work/PCBteach/02_MY_projects/FPGA/OMDAZZ_test/OMDAZZ_test_FPGA/controller_hw.tcl" />
   </sourceFiles>
   <childSourceFiles/>
   <instantiator instantiator="simple_struct" as="controller_0" />
@@ -232,14 +232,14 @@
   <parameter name="input_clk" value="50000000" />
   <generatedFiles>
    <file
-       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/simple_struct/synthesis/submodules/i2c_master.vhd"
+       path="D:/Work/PCBteach/02_MY_projects/FPGA/OMDAZZ_test/OMDAZZ_test_FPGA/simple_struct/synthesis/submodules/i2c_master.vhd"
        type="VHDL"
        attributes="TOP_LEVEL_FILE" />
   </generatedFiles>
   <childGeneratedFiles/>
   <sourceFiles>
    <file
-       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/i2c_transcever_hw.tcl" />
+       path="D:/Work/PCBteach/02_MY_projects/FPGA/OMDAZZ_test/OMDAZZ_test_FPGA/i2c_transcever_hw.tcl" />
   </sourceFiles>
   <childSourceFiles/>
   <instantiator instantiator="simple_struct" as="i2c_transcever_0" />
@@ -262,14 +262,14 @@
   <parameter name="STOP_BITS" value="1" />
   <generatedFiles>
    <file
-       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/simple_struct/synthesis/submodules/usart.vhd"
+       path="D:/Work/PCBteach/02_MY_projects/FPGA/OMDAZZ_test/OMDAZZ_test_FPGA/simple_struct/synthesis/submodules/usart.vhd"
        type="VHDL"
        attributes="TOP_LEVEL_FILE" />
   </generatedFiles>
   <childGeneratedFiles/>
   <sourceFiles>
    <file
-       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/usart_hw.tcl" />
+       path="D:/Work/PCBteach/02_MY_projects/FPGA/OMDAZZ_test/OMDAZZ_test_FPGA/usart_hw.tcl" />
   </sourceFiles>
   <childSourceFiles/>
   <instantiator instantiator="simple_struct" as="usart_0" />
@@ -287,15 +287,15 @@
    name="altera_reset_controller">
   <generatedFiles>
    <file
-       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/simple_struct/synthesis/submodules/altera_reset_controller.v"
+       path="D:/Work/PCBteach/02_MY_projects/FPGA/OMDAZZ_test/OMDAZZ_test_FPGA/simple_struct/synthesis/submodules/altera_reset_controller.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/simple_struct/synthesis/submodules/altera_reset_synchronizer.v"
+       path="D:/Work/PCBteach/02_MY_projects/FPGA/OMDAZZ_test/OMDAZZ_test_FPGA/simple_struct/synthesis/submodules/altera_reset_synchronizer.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/Work/PCBteach/docs/02_MY_projects/FPGA_Projects/OMDAZZ_test/simple_struct/synthesis/submodules/altera_reset_controller.sdc"
+       path="D:/Work/PCBteach/02_MY_projects/FPGA/OMDAZZ_test/OMDAZZ_test_FPGA/simple_struct/synthesis/submodules/altera_reset_controller.sdc"
        type="SDC"
        attributes="" />
   </generatedFiles>

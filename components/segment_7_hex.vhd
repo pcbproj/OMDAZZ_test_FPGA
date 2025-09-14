@@ -89,7 +89,9 @@ process (clk, wr_valid)
 	variable hex : STD_LOGIC_VECTOR(3 DOWNTO 0);
 begin
 	IF en = '0' THEN
-		c_sel<= "1111";
+--		c_sel<= "1111";
+		c_sel <= "0000"; -- select all idgits
+		dec <= "00000000"; -- turn on all segments 
 	elsif (wr_valid = '1' ) then
 		d_in	<= dec_in;
 		dp		<= dp_in;
@@ -114,7 +116,7 @@ begin
 			dec(7) <= NOT dp(3);
 		WHEN OTHERS => NULL;
 		END CASE;
-		
+		 
 		case hex is
 			when "0000" => dec(6 downto 0) <= "1000000"; -- 0
 			when "0001" => dec(6 downto 0) <= "1111001"; -- 1
